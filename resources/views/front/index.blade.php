@@ -522,12 +522,12 @@
             </div>
         </section><!--====== End Testimonial Section ======-->
         <!--====== Start Blog Section ======-->
-        <section class="blog-section pt-100 pb-60">
+        <section class="blog-section pt-100 pb-60" id="News">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="section-title text-center mb-45">
-                            <span class="sub-title">News & Blog</span>
+                            <span class="sub-title">News & Articles</span>
                             <h2>Amazing News & Blog For
                                 Every Single Update</h2>
                         </div>

@@ -156,7 +156,7 @@
                                     <li class="menu-item"><a href="{{url('/')}}">Home</a>
 
                                     </li>
-                                    <li class="menu-item"><a href="#">About Us</a>
+                                    <li class="menu-item"><a href="{{url('/')}}/about-us">About Us</a>
 
                                     </li>
 
@@ -186,7 +186,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class="menu-item"><a href="#">News & Articles</a>
+                                    <li class="menu-item"><a href="{{url('/')}}/#News">News & Articles</a>
 
                                     </li>
 

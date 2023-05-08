@@ -51,7 +51,7 @@
                     </div>
                     <div class="info">
                         <span class="title">Email Address</span>
-                        <p><a href="mailto:info@halisiafricadiscoveries.com"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span></a></p>
+                        <p><a href="mailto:info@halisiafricadiscoveries.com"><span class="__cf_email__" data-cfemail="">info@halisiafricadiscoveries.com</span></a></p>
                         <p><a href="https://halisiafricadiscoveries.com/">halisiafricadiscoveries.com</a></p>
                     </div>
                 </div>
@@ -64,8 +64,8 @@
                     </div>
                     <div class="info">
                         <span class="title">Hotline</span>
-                        <p><a href="tel:+000(123)45688">+000 (123) 456 88</a></p>
-                        <p><a href="tel:+8596320">+859 63 20</a></p>
+                        <p><a href="tel:+254700757752">+254700757752</a></p>
+                        <p><a href="tel:+254700757752">+254700757752</a></p>
                     </div>
                 </div>
             </div>
