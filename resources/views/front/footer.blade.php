@@ -41,7 +41,7 @@
                             <p>
 
                             </p>
-                            <a href="#" class="footer-logo"><img src="{{url('/')}}/uploads/halisi-logo.jpeg" alt="Site Logo"></a>
+                            <a href="#" class="footer-logo"><img src="{{url('/')}}/uploads/Halisi-Travel-Agency-vcx-15.png" alt="Site Logo"></a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                 <div class="col-lg-6">
                     <!--=== Footer Text ===-->
                     <div class="footer-text">
-                        <p><a href="mailto:mailto:info@halisiafricadiscoveries.com" class="__cf_email__" data-cfemail="5a19352a231a">[email&#160;protected]</a> 2023 <span style="color: #F7921E;">Halisi Africa Discoveries</span>, All Right Reserved</p>
+                        <p><a href="mailto:mailto:info@halisiafricadiscoveries.com" class="__cf_email__" data-cfemail="5a19352a231a">Copyright </a> {{date('Y')}} <span style="color: #F7921E;">Halisi Africa Discoveries</span>, All Right Reserved</p>
                     </div>
                 </div>
                 <div class="col-lg-6">

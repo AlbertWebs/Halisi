@@ -69,92 +69,9 @@
             </div>
         </section><!--====== End Hero Section ======-->
         <!--====== Start Features Section ======-->
-        <section class="features-section pt-100 pb-50">
-            <div class="container">
-                <div class="row align-items-xl-center">
-                    <div class="col-xl-5">
-                        <!--=== Features Content Box ===-->
-                        <div class="features-content-box pr-lg-70 mb-50">
-                            <!--=== Section Title ===-->
-                            <div class="section-title mb-30">
-                                <span class="sub-title">Availability</span>
-                                <h2>Explore Halisi Africa Discoveries
-                                    Real Adventure
-                                    & Travels</h2>
-                            </div>
-                            <p class="mb-30">Sit amet consectetur integer tincidunt sceleries noda
-                                lesry volutpat neque fermentum malesuada scelequecy
-                                leocras odio blandit rhoncus eues feugiat</p>
-                            <a href="#" class="main-btn filled-btn">Learn More<i class="far fa-paper-plane"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-7">
-                        <div class="features-item-area mb-20">
-                            <div class="row pl-lg-70">
-                                <div class="col-md-6">
-                                    <!--=== Fancy Icon Box ===-->
-                                    <div class="fancy-icon-box-two mb-30">
-                                        <div class="icon">
-                                            <i class="flaticon-camping"></i>
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">Tent Camping</h3>
-                                            <p>Sit amet consectetur integ
-                                                tincidunt scelerie nodermen
-                                                malesuada sceleris massa</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!--=== Fancy Icon Box ===-->
-                                    <div class="fancy-icon-box-two mb-30">
-                                        <div class="icon">
-                                            <i class="flaticon-biking-mountain"></i>
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">Mountain Biking</h3>
-                                            <p>Sit amet consectetur integ
-                                                tincidunt scelerie nodermen
-                                                malesuada sceleris massa</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!--=== Fancy Icon Box ===-->
-                                    <div class="fancy-icon-box-two mb-30">
-                                        <div class="icon">
-                                            <i class="flaticon-fishing-2"></i>
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">Fishing & Boat</h3>
-                                            <p>Sit amet consectetur integ
-                                                tincidunt scelerie nodermen
-                                                malesuada sceleris massa</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!--=== Fancy Icon Box ===-->
-                                    <div class="fancy-icon-box-two mb-30">
-                                        <div class="icon">
-                                            <i class="flaticon-caravan"></i>
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">RV Caravan Tent</h3>
-                                            <p>Sit amet consectetur integ
-                                                tincidunt scelerie nodermen
-                                                malesuada sceleris massa</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!--====== End Features Section ======-->
+
         <!--====== Start About Section ======-->
-        <section class="about-section bg_cover pt-165 pb-210" style="background-image: url('{{asset('theme/assets/images/bg/about-bg-1.jpg')}});">
+        <section class="about-section bg_cover pt-165 pb-210" style="background-image: url('{{asset('theme/assets/images/bg/about-bg-1.jpg')}}');">
             <div class="container">
                 <div class="row align-items-xl-center">
                     <div class="col-lg-6">
@@ -173,8 +90,8 @@
                                     Adventure Company</h2>
                             </div>
                             <p class="mb-30">Sit amet consectetur. Velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus
-                                Ultrices eget leo cras odio blandit rhoncus eues feugiat</p>
-                            <img src="{{asset('theme/assets/images/about/avater.png')}}" alt="Avater">
+                                Ultrices eget leo cras odio blandit rhoncus eues feugiat
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -184,7 +101,7 @@
         <section class="fun-section">
             <div class="container">
                 <!--=== Fun Wrapper ===-->
-                <div class="fun-wrapper pt-60 pb-20 bg_cover" style="background-image: url('{{asset('theme/assets/images/bg/map.png')}});">
+                <div class="fun-wrapper pt-60 pb-20 bg_cover" style="background-image: url('{{asset('theme/assets/images/bg/map.png')}}');">
                     <div class="row">
                         <div class="col-lg-3 col-sm-6">
                             <!--=== Counter Item ===-->
@@ -268,13 +185,7 @@
                                 pellentue augue mattis faucibus</p>
                             <img src="{{asset('theme/assets/images/service/service-4.jpg')}}" alt="service image">
                             <a href="#" class="btn-link">Read More<i class="far fa-long-arrow-right"></i></a>
-                            <div class="meta">
-                                <span class="icon"><i class="flaticon-blanket"></i></span>
-                                <span class="icon"><i class="flaticon-cat"></i></span>
-                                <span class="icon"><i class="flaticon-tent"></i></span>
-                                <span class="icon"><i class="flaticon-fire"></i></span>
-                                <span class="rate"><i class="fas fa-star"></i>4.9</span>
-                            </div>
+
                         </div>
                     </div>
                     <!--=== Service Item ===-->
@@ -285,13 +196,7 @@
                                 and beguiled and demoralized</p>
                             <img src="{{asset('theme/assets/images/service/service-5.jpg')}}" alt="service image">
                             <a href="#" class="btn-link">Read More<i class="far fa-long-arrow-right"></i></a>
-                            <div class="meta">
-                                <span class="icon"><i class="flaticon-blanket"></i></span>
-                                <span class="icon"><i class="flaticon-cat"></i></span>
-                                <span class="icon"><i class="flaticon-tent"></i></span>
-                                <span class="icon"><i class="flaticon-fire"></i></span>
-                                <span class="rate"><i class="fas fa-star"></i>4.9</span>
-                            </div>
+
                         </div>
                     </div>
                     <!--=== Service Item ===-->
@@ -302,28 +207,21 @@
                                 laborious physical exercise chooses</p>
                             <img src="{{asset('theme/assets/images/service/service-6.jpg')}}" alt="service image">
                             <a href="#" class="btn-link">Read More<i class="far fa-long-arrow-right"></i></a>
-                            <div class="meta">
-                                <span class="icon"><i class="flaticon-blanket"></i></span>
-                                <span class="icon"><i class="flaticon-cat"></i></span>
-                                <span class="icon"><i class="flaticon-tent"></i></span>
-                                <span class="icon"><i class="flaticon-fire"></i></span>
-                                <span class="rate"><i class="fas fa-star"></i>4.9</span>
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section><!--====== End Service Section ======-->
         <!--====== Start CTA Section ======-->
-        <section class="cta-bg overlay bg_cover pt-150 pb-150" style="background-image: url('{{asset('theme/assets/images/bg/cta-bg2.jpg')}});">
+        <section class="cta-bg overlay bg_cover pt-150 pb-150" style="background-image: url('{{asset('theme/assets/images/bg/cta-bg2.jpg')}}');">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-8">
                         <!--=== CTA Content Box ===-->
                         <div class="cta-content-box text-white">
-                            <h2 class="mb-35">Ready to Travel With Real
-                                Adventure and Enjoy Natural</h2>
-                            <a href="about.html" class="main-btn secondary-btn">Check Availability<i class="far fa-paper-plane"></i></a>
+                            <h2 class="mb-35">Ready to Travel? </h2>
+                            <a href="about.html" class="main-btn secondary-btn">Call US <i class="far fa-phone"></i></a>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-4">
@@ -369,7 +267,7 @@
                         <div class="we-content-box pl-lg-50 mb-10">
                             <!--=== Section Title ===-->
                             <div class="section-title mb-30">
-                                <span class="sub-title">Who We Are</span>
+                                <span class="sub-title">Why choose us</span>
                                 <h2>Great Opportunity For
                                     Adventure & Travels</h2>
                             </div>
@@ -477,7 +375,7 @@
             </div>
         </section><!--====== End Gallery Section ======-->
         <!--====== Start Testimonial Section ======-->
-        <section class="testimonial-section bg_cover pt-100 pb-100" style="background-image: url('{{asset('theme/assets/images/bg/map-bg.jpg')}});">
+        <section class="testimonial-section bg_cover pt-100 pb-100" style="background-image: url('{{asset('theme/assets/images/bg/map-bg.jpg')}}');">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-7">
@@ -695,7 +593,7 @@
                     <!--=== Partner Item ===-->
                     <div class="single-partner-item">
                         <div class="partner-img">
-                            <a href="#"><img src="{{asset('theme/assets/images/partner/partner-1.png')}}" alt="Partner Image"></a>
+                            <a href="#"><img src="{{url('/')}}/uploads/partners/1.jpg" alt="Partner Image"></a>
                         </div>
                     </div>
                     <!--=== Partner Item ===-->
@@ -707,25 +605,43 @@
                     <!--=== Partner Item ===-->
                     <div class="single-partner-item">
                         <div class="partner-img">
-                            <a href="#"><img src="{{asset('theme/assets/images/partner/partner-3.png')}}" alt="Partner Image"></a>
+                            <a href="#"><img src="{{url('/')}}/uploads/partners/2.jpg" alt="Partner Image"></a>
                         </div>
                     </div>
                     <!--=== Partner Item ===-->
                     <div class="single-partner-item">
                         <div class="partner-img">
-                            <a href="#"><img src="{{asset('theme/assets/images/partner/partner-4.png')}}" alt="Partner Image"></a>
+                            <a href="#"><img src="{{url('/')}}/uploads/partners/3.jpg" alt="Partner Image"></a>
                         </div>
                     </div>
                     <!--=== Partner Item ===-->
                     <div class="single-partner-item">
                         <div class="partner-img">
-                            <a href="#"><img src="{{asset('theme/assets/images/partner/partner-5.png')}}" alt="Partner Image"></a>
+                            <a href="#"><img src="{{url('/')}}/uploads/partners/4.jpg" alt="Partner Image"></a>
                         </div>
                     </div>
                     <!--=== Partner Item ===-->
                     <div class="single-partner-item">
                         <div class="partner-img">
-                            <a href="#"><img src="{{asset('theme/assets/images/partner/partner-4.png')}}" alt="Partner Image"></a>
+                            <a href="#"><img src="{{url('/')}}/uploads/partners/5.jpg" alt="Partner Image"></a>
+                        </div>
+                    </div>
+                    <!--=== Partner Item ===-->
+                    <div class="single-partner-item">
+                        <div class="partner-img">
+                            <a href="#"><img src="{{url('/')}}/uploads/partners/6.jpg" alt="Partner Image"></a>
+                        </div>
+                    </div>
+                    <!--=== Partner Item ===-->
+                    <div class="single-partner-item">
+                        <div class="partner-img">
+                            <a href="#"><img src="{{url('/')}}/uploads/partners/7.jpg" alt="Partner Image"></a>
+                        </div>
+                    </div>
+                    <!--=== Partner Item ===-->
+                    <div class="single-partner-item">
+                        <div class="partner-img">
+                            <a href="#"><img src="{{url('/')}}/uploads/partners/8.jpg" alt="Partner Image"></a>
                         </div>
                     </div>
                 </div>
