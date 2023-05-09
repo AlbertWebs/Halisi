@@ -71,7 +71,7 @@
         <!--====== Start Features Section ======-->
 
         <!--====== Start About Section ======-->
-        <section class="about-section bg_cover pt-165 pb-210" style="background-image: url('{{asset('theme/assets/images/bg/about-bg-1.jpg')}}');">
+        <section class="about-section bg_cover pt-60 pb-60" style="background-image: url('{{asset('theme/assets/images/bg/about-bg-1.jpg')}}');">
             <div class="container">
                 <div class="row align-items-xl-center">
                     <div class="col-lg-6">
@@ -92,77 +92,22 @@
                             <p class="mb-30">Sit amet consectetur. Velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus
                                 Ultrices eget leo cras odio blandit rhoncus eues feugiat
                             </p>
+                            <p class="mb-30">Sit amet consectetur. Velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus
+                                Ultrices eget leo cras odio blandit rhoncus eues feugiat
+                            </p>
+                            <p class="mb-30">Sit amet consectetur. Velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus
+                                Ultrices eget leo cras odio blandit rhoncus eues feugiat
+                            </p>
+
                         </div>
+                    </div>
+                    <div class="big-text pt-10s wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                        <img src="{{asset('theme/assets/images/bg/adventure.png')}}" alt="Halisi Afirca Discoveries">
                     </div>
                 </div>
             </div>
         </section><!--====== End About Section ======-->
-        <!--====== Start Fun Section ======-->
-        <section class="fun-section">
-            <div class="container">
-                <!--=== Fun Wrapper ===-->
-                <div class="fun-wrapper pt-60 pb-20 bg_cover" style="background-image: url('{{asset('theme/assets/images/bg/map.png')}}');">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-6">
-                            <!--=== Counter Item ===-->
-                            <div class="single-counter-item-two mb-30">
-                                <div class="inner-counter text-center">
-                                    <div class="icon">
-                                        <i class="flaticon-journey"></i>
-                                    </div>
-                                    <div class="content text-white">
-                                        <h2 class="number"><span class="count">356</span>+</h2>
-                                        <p>Happy Traveler</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!--=== Counter Item ===-->
-                            <div class="single-counter-item-two mb-30">
-                                <div class="inner-counter text-center">
-                                    <div class="icon">
-                                        <i class="flaticon-tent-1"></i>
-                                    </div>
-                                    <div class="content text-white">
-                                        <h2 class="number"><span class="count">99</span>%</h2>
-                                        <p>Positive Reviews</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!--=== Counter Item ===-->
-                            <div class="single-counter-item-two mb-30">
-                                <div class="inner-counter text-center">
-                                    <div class="icon">
-                                        <i class="flaticon-reviews"></i>
-                                    </div>
-                                    <div class="content text-white">
-                                        <h2 class="number"><span class="count">99</span>%</h2>
-                                        <p>Positive Reviews</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!--=== Counter Item ===-->
-                            <div class="single-counter-item-two mb-30">
-                                <div class="inner-counter text-center">
-                                    <div class="icon">
-                                        <i class="flaticon-award"></i>
-                                    </div>
-                                    <div class="content text-white">
-                                        <h2 class="number"><span class="count">24</span>K+</h2>
-                                        <p>Awards Winning</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!--====== End Fun Section ======-->
+
         <!--====== Start Service Section ======-->
         <section class="service-section pt-100 pb-60">
             <div class="container">
@@ -170,9 +115,9 @@
                     <div class="col-xl-7">
                         <!--=== Section Title ===-->
                         <div class="section-title text-center mb-50">
-                            <span class="sub-title">Popular Services</span>
-                            <h2>Amazing Adventure Camping
-                                Services for Enjoyed</h2>
+                            <span class="sub-title">Popular Destination</span>
+                            <h2>Learn <strong>∙</strong> Travel <strong>∙</strong> Explore</h2>
+                            <hr>
                         </div>
                     </div>
                 </div>
@@ -221,7 +166,7 @@
                         <!--=== CTA Content Box ===-->
                         <div class="cta-content-box text-white">
                             <h2 class="mb-35">Ready to Travel? </h2>
-                            <a href="about.html" class="main-btn secondary-btn">Call US <i class="far fa-phone"></i></a>
+                            <a href="tel:254700757752" class="main-btn secondary-btn">Call US <i class="far fa-phone"></i></a>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-4">
@@ -410,10 +355,10 @@
                                 man.</p>
                             <div class="author-thumb-title">
                                 <div class="author-thumb">
-                                    <img src="{{asset('theme/assets/images/testimonial/author-1.jpg')}}" alt="Author Image">
+                                    <img src="{{url('/')}}/uploads/testimonials/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
                                 </div>
                                 <div class="author-title">
-                                    <h3 class="title">Douglas D. Hall</h3>
+                                    <h3 class="title">Douglas Onyancha</h3>
                                     <p class="position">CEO & Founder</p>
                                 </div>
                             </div>
@@ -443,10 +388,10 @@
                                 man.</p>
                             <div class="author-thumb-title">
                                 <div class="author-thumb">
-                                    <img src="{{asset('theme/assets/images/testimonial/author-2.jpg')}}" alt="Author Image">
+                                    <img src="{{url('/')}}/uploads/testimonials/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
                                 </div>
                                 <div class="author-title">
-                                    <h3 class="title">Douglas D. Hall</h3>
+                                    <h3 class="title">John Kirimi</h3>
                                     <p class="position">CEO & Founder</p>
                                 </div>
                             </div>
@@ -476,10 +421,10 @@
                                 man.</p>
                             <div class="author-thumb-title">
                                 <div class="author-thumb">
-                                    <img src="{{asset('theme/assets/images/testimonial/author-3.jpg')}}" alt="Author Image">
+                                    <img src="{{url('/')}}/uploads/testimonials/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
                                 </div>
                                 <div class="author-title">
-                                    <h3 class="title">Douglas D. Hall</h3>
+                                    <h3 class="title">Rickie Kamau</h3>
                                     <p class="position">CEO & Founder</p>
                                 </div>
                             </div>
@@ -509,10 +454,10 @@
                                 man.</p>
                             <div class="author-thumb-title">
                                 <div class="author-thumb">
-                                    <img src="{{asset('theme/assets/images/testimonial/author-2.jpg')}}" alt="Author Image">
+                                    <img src="{{url('/')}}/uploads/testimonials/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
                                 </div>
                                 <div class="author-title">
-                                    <h3 class="title">Douglas D. Hall</h3>
+                                    <h3 class="title">Oscar Lino</h3>
                                     <p class="position">CEO & Founder</p>
                                 </div>
                             </div>

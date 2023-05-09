@@ -179,18 +179,15 @@
                                     </li>
 
 
-                                    <li class="menu-item has-children"><a href="#">Destinations</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="destination.html">Destination</a></li>
+                                    <li class="menu-item"><a href="{{url('/')}}/destinations">Destinations</a>
 
-                                        </ul>
                                     </li>
 
                                     <li class="menu-item"><a href="{{url('/')}}/#News">News & Articles</a>
 
                                     </li>
 
-                                    <li class="menu-item"><a href="#">Plan My Trip</a>
+                                    <li class="menu-item"><a href="{{url('/')}}/plan-my-trip">Plan My Trip</a>
 
                                     </li>
 

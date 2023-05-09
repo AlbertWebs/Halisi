@@ -54,14 +54,14 @@
                                 <li><a href="#">Explore Countries</a></li>
                                 <li><a href="#">Destinations</a></li>
                                 <li><a href="#">Services</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="{{url('/')}}/contact-us">Contact Us</a></li>
 
                             </ul>
                             <ul class="footer-widget-nav">
                                 <li><a href="#">Careers</a></li>
-                                <li><a href="#">Latest News</a></li>
-                                <li><a href="#">Plan My Trip</a></li>
-                                <li><a href="#">About Us</a></li>
+                                <li><a href="{{url('/')}}/#News">Latest News</a></li>
+                                <li><a href="{{url('/')}}/plan-my-trip">Plan My Trip</a></li>
+                                <li><a href="{{url('/')}}/about-us">About Us</a></li>
                             </ul>
                         </div>
                     </div>

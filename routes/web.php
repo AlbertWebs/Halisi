@@ -25,3 +25,12 @@ Route::get('/contact-us', function () {
 Route::get('/about-us', function () {
     return view('front.about');
 });
+
+Route::get('/plan-my-trip', function () {
+    return view('front.plan');
+});
+
+Route::get('/destinations', function () {
+    return view('front.destinations');
+});
+
