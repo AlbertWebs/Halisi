@@ -279,30 +279,30 @@
                     <!--=== Gallery Item ===-->
                     <div class="single-gallery-item-two">
                         <div class="img-holder">
-                            <img src="{{asset('theme/assets/images/gallery/gallery-7.jpg')}}" alt="Gallery Image">
+                            <img style="min-height:371px" src="{{url('/')}}/uploads/destinations/amboseli-3.jpeg" alt="Gallery Image">
                         </div>
                         <div class="content">
-                            <h3 class="title">Tent Camping Inside Forest</h3>
+                            <h3 class="title">Amboseli National Park</h3>
                             <a href="#">Adventure & Travel</a>
                         </div>
                     </div>
                     <!--=== Gallery Item ===-->
                     <div class="single-gallery-item-two">
                         <div class="img-holder">
-                            <img src="{{asset('theme/assets/images/gallery/gallery-8.jpg')}}" alt="Gallery Image">
+                            <img style="min-height:371px" src="{{url('/')}}/uploads/destinations/maasai-mara-lion-king.webp" alt="Gallery Image">
                         </div>
                         <div class="content">
-                            <h3 class="title">Couple Tent Camping On Hills</h3>
+                            <h3 class="title">Masai Mara</h3>
                             <a href="#">Adventure & Travel</a>
                         </div>
                     </div>
                     <!--=== Gallery Item ===-->
                     <div class="single-gallery-item-two">
                         <div class="img-holder">
-                            <img src="{{asset('theme/assets/images/gallery/gallery-9.jpg')}}" alt="Gallery Image">
+                            <img style="min-height:371px" src="{{url('/')}}/uploads/destinations/nairobi-city-tours.jpg" alt="Gallery Image">
                         </div>
                         <div class="content">
-                            <h3 class="title">Camping For Every Children</h3>
+                            <h3 class="title">City Excursions</h3>
                             <a href="#">Adventure & Travel</a>
                         </div>
                     </div>
