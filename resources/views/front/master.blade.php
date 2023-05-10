@@ -5,10 +5,24 @@
         <!--====== Required meta tags ======-->
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="Adventure, Tours, Travel">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--====== Title ======-->
         <title>Halisi Africa Discoveries - Tours and Travel Company</title>
+        {{--  --}}
+        <meta name="description" content="Best Tours and Travels Company in Kenya, Tours & Travels, Tent Camping, Masai Mara, Amboseli National Park, Fishing, Hot Air Balloon, Nairobi City Excursions">
+        <link rel="canonical" href="{{url('/')}}"/>
+        <meta name="author" content="Designekta Studios">
+        <meta property="og:description" content="Best Tours and Travels Company in Kenya, Tours & Travels, Tent Camping, Masai Mara, Amboseli National Park, Fishing, Hot Air Balloon, Nairobi City Excursions">
+        <meta property="og:image" content="{{url('/')}}/uploads/logo/favicon.png" />
+        <meta property="og:" content="Halisi Africa Discoveries - Tours and Travel Company" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{url('/')}}" />
+
+        <meta name="twitter:title" content="Halisi Africa Discoveries - Tours and Travel Company" />
+        <meta name="twitter:site" content="@halisiafricadiscoveries" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@halisiafricadiscoveries" />
+        {{--  --}}
         <!--====== Favicon Icon ======-->
         <link rel="shortcut icon" href="{{asset('theme/assets/images/favicon.ico')}}" type="image/png">
         <!--====== Google Fonts ======-->
