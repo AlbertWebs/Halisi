@@ -24,7 +24,7 @@
         <meta name="twitter:creator" content="@halisiafricadiscoveries" />
         {{--  --}}
         <!--====== Favicon Icon ======-->
-        <link rel="shortcut icon" href="{{asset('theme/assets/images/favicon.ico')}}" type="image/png">
+        <link rel="shortcut icon" href="{{url('/')}}/uploads/logo/favicon.png" type="image/png">
         <!--====== Google Fonts ======-->
         <link href="../../../fonts.googleapis.com/css2c392.css?family=Prompt:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
         <!--====== Flaticon css ======-->
