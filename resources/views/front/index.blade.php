@@ -115,47 +115,114 @@
                     <div class="col-xl-7">
                         <!--=== Section Title ===-->
                         <div class="section-title text-center mb-50">
-                            <span class="sub-title">Popular Destination</span>
+                            <span class="sub-title">Popular Activities</span>
                             <h2>Learn <strong>∙</strong> Travel <strong>∙</strong> Explore</h2>
                             <hr>
                         </div>
                     </div>
                 </div>
-                <div class="slider-active-3-item">
-                    <!--=== Service Item ===-->
-                    <div class="single-service-item-three mb-40">
-                        <div class="content">
-                            <h3 class="title"><a href="#">Classic Tents</a></h3>
-                            <p>Sit amet consecteturauris natoque name
-                                pellentue augue mattis faucibus</p>
-                            <img src="{{asset('theme/assets/images/service/service-4.jpg')}}" alt="service image">
-                            <a href="#" class="btn-link">Read More<i class="far fa-long-arrow-right"></i></a>
-
+               {{--  --}}
+               <div class="row">
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <!--=== Features Image Item ===-->
+                        <div class="single-features-item-two mb-40 wow fadeInUp">
+                            <div class="img-holder">
+                                <img src="{{asset('theme/assets/images/features/feat-5.jpg')}}" alt="Tent Camping">
+                                <div class="item-overlay">
+                                    <div class="content">
+                                        <h3 class="title">Tent Camping</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!--=== Service Item ===-->
-                    <div class="single-service-item-three mb-40">
-                        <div class="content">
-                            <h3 class="title"><a href="#">Caravan Solar Tent</a></h3>
-                            <p>We denounce with righteous indignation
-                                and beguiled and demoralized</p>
-                            <img src="{{asset('theme/assets/images/service/service-5.jpg')}}" alt="service image">
-                            <a href="#" class="btn-link">Read More<i class="far fa-long-arrow-right"></i></a>
-
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <!--=== Features Image Item ===-->
+                        <div class="single-features-item-two mb-40 wow fadeInDown">
+                            <div class="img-holder">
+                                <img src="{{asset('theme/assets/images/features/feat-6.jpg')}}" alt="Mountain Biking">
+                                <div class="item-overlay">
+                                    <div class="content">
+                                        <h3 class="title">Mountain Biking</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!--=== Service Item ===-->
-                    <div class="single-service-item-three mb-40">
-                        <div class="content">
-                            <h3 class="title"><a href="tour-details.html">Small Cabin Wood</a></h3>
-                            <p>To take trivial example which undertakes
-                                laborious physical exercise chooses</p>
-                            <img src="{{asset('theme/assets/images/service/service-6.jpg')}}" alt="service image">
-                            <a href="#" class="btn-link">Read More<i class="far fa-long-arrow-right"></i></a>
-
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <!--=== Features Image Item ===-->
+                        <div class="single-features-item-two mb-40 wow fadeInUp">
+                            <div class="img-holder">
+                                <img src="{{asset('theme/assets/images/features/feat-7.jpg')}}" alt="Fishing">
+                                <div class="item-overlay">
+                                    <div class="content">
+                                        <h3 class="title">Fishing</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <!--=== Features Image Item ===-->
+                        <div class="single-features-item-two mb-40 wow fadeInDown">
+                            <div class="img-holder">
+                                <img src="{{asset('theme/assets/images/features/feat-8.jpg')}}" alt="Kayaking">
+                                <div class="item-overlay">
+                                    <div class="content">
+                                        <h3 class="title">Kayaking</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <!--=== Features Image Item ===-->
+                        <div class="single-features-item-two mb-40 wow fadeInUp">
+                            <div class="img-holder">
+                                <img style="min-height:357px" src="{{url('/')}}/uploads/destinations/hot-air-balloon-safari-masai-mara-kenya-small.jpg" alt="Kayaking">
+                                <div class="item-overlay">
+                                    <div class="content">
+                                        <h3 class="title">Hot Air Balloon</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <!--=== Features Image Item ===-->
+                        <div class="single-features-item-two mb-40 wow fadeInDown">
+                            <div class="img-holder">
+                                <img style="min-height:357px" src="{{url('/')}}/uploads/destinations/nairobi-city-tours.jpg" alt="Kayaking">
+                                <div class="item-overlay">
+                                    <div class="content">
+                                        <h3 class="title">City Excursions</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <!--=== Features Image Item ===-->
+                        <div class="single-features-item-two mb-40 wow fadeInUp">
+                            <div class="img-holder">
+                                <img style="min-height:357px" src="{{url('/')}}/uploads/destinations/pexels-melissa-villarán-4938780.jpg" alt="Kayaking">
+                                <div class="item-overlay">
+                                    <div class="content">
+                                        <h3 class="title">Zip Lining</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
+               {{--  --}}
             </div>
         </section><!--====== End Service Section ======-->
         <!--====== Start CTA Section ======-->
@@ -189,19 +256,19 @@
                                 <div class="col-md-6">
                                     <!--=== We Image ===-->
                                     <div class="we-image mb-30">
-                                        <img src="{{asset('theme/assets/images/gallery/we-3.jpg')}}" alt="we Image">
+                                        <img src="{{url('/')}}/uploads/destinations/ol-seki-hemingways-lodge-mara-naboisho-small.jpg" alt="we Image">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <!--=== We Image ===-->
                                     <div class="we-image mb-30">
-                                        <img src="{{asset('theme/assets/images/gallery/we-4.jpg')}}" alt="we Image">
+                                        <img src="{{url('/')}}/uploads/destinations/hot-air-balloon-safari-masai-mara-kenya-small.jpg" alt="we Image">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <!--=== We Image ===-->
                                     <div class="we-image mb-30 pr-lg-30 text-md-end">
-                                        <img src="{{asset('theme/assets/images/gallery/we-5.jpg')}}" alt="we Image">
+                                        <img src="{{url('/')}}/uploads/destinations/Amboseli-National-park-weather.jpg" alt="we Image">
                                     </div>
                                 </div>
                             </div>
