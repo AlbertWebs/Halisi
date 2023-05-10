@@ -218,6 +218,22 @@
                         </div>
                     </div>
 
+                    <div class="col-xl-3 col-md-6 col-sm-12">
+                        <!--=== Features Image Item ===-->
+                        <div class="single-features-item-two mb-40 wow fadeInUp">
+                            <div class="img-holder">
+                                <img style="min-height:357px" src="{{url('/')}}/uploads/destinations/gorilla_nk-1200x800.webp" alt="Kayaking">
+                                <div class="item-overlay">
+                                    <div class="content">
+                                        <h3 class="title">Gorilla Trekking</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
 
 
 

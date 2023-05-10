@@ -133,13 +133,13 @@
                         <!--====== Site Branding ======-->
                         <div class="site-brading d-block d-xl-none">
                             {{-- White --}}
-                            <a href="{{url('/')}}" class="brand-logo"><img src="{{url('/')}}/uploads/halisi-logo-removebg-preview.png" alt="Logo"></a>
+                            <a href="{{url('/')}}" class="brand-logo"><img style="max-width:200px" src="{{url('/')}}/uploads/logo/Halisi-Travel-Agency-HOR-15.png" alt="Logo"></a>
                         </div>
                         <!--====== Nav Menu ======-->
                         <div class="nav-menu">
                             <!--====== Site Branding ======-->
                             <div class="mobile-logo mb-30 d-block d-xl-none">
-                                <a href="{{url('/')}}" class="brand-logo"><img src="{{url('/')}}/uploads/halisi-logo-removebg-preview.png" alt="Site Logo"></a>
+                                <a href="{{url('/')}}" class="brand-logo"><img src="{{url('/')}}/uploads/logo/logo.png" alt="Site Logo"></a>
                             </div>
                             <!--=== Nav Search ===-->
                             <div class="nav-search mb-30 d-block d-xl-none ">
