@@ -153,12 +153,8 @@
                             <!--====== Main Menu ======-->
                             <nav class="main-menu">
                                 <ul>
-                                    <li class="menu-item"><a href="{{url('/')}}">Home</a>
 
-                                    </li>
-                                    <li class="menu-item"><a href="{{url('/')}}/about-us">About Us</a>
 
-                                    </li>
 
 
 
@@ -184,6 +180,10 @@
                                     </li> --}}
 
                                     <li class="menu-item"><a href="{{url('/')}}/#News">News & Articles</a>
+
+                                    </li>
+
+                                    <li class="menu-item"><a href="{{url('/')}}/about-us">About Us</a>
 
                                     </li>
 
