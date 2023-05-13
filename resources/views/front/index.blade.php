@@ -76,8 +76,8 @@
                 <div class="row align-items-xl-center">
                     <div class="col-lg-6">
                         <!--=== About Image Box ===-->
-                        <div class="about-image-box mb-50">
-                            <img src="{{asset('theme/assets/images/about/about-2.jpg')}}" class="rounded-2" alt="About Image">
+                        <div class="about-image-box mbs-50">
+                            <img src="{{url('/')}}/uploads/banners/pexels-twilight-kenya-11866350.jpg" class="rounded-2" alt="About Image">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -86,8 +86,8 @@
                             <!--=== Section Title ===-->
                             <div class="section-title mb-30">
                                 <span class="sub-title">About Company</span>
-                                <h2>We’re Number 1 Travel
-                                    Adventure Company</h2>
+                                <h2>We’re Number #1 Travel
+                                    Adventure Partner</h2>
                             </div>
                             <p class="mb-30">Sit amet consectetur. Velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus
                                 Ultrices eget leo cras odio blandit rhoncus eues feugiat
