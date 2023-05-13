@@ -1,73 +1,72 @@
-@extends('front.master')
+@extends('front.master-home')
 
 @section('content')
-        <!--====== Start Hero Section ======-->
-        <section class="hero-section">
-            <div class="hero-wrapper-three">
-                <div class="hero-arrows"></div>
-                <div class="hero-slider-three">
-                    <!--=== Single Slider ===-->
-                    <div class="single-slider">
-                        <div class="image-layer bg_cover" style="background-image: url('{{asset('theme/assets/images/hero/hero-three_img-1.jpg')}}');"></div>
-                        <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col-xl-7">
-                                    <!--=== Hero Content ===-->
-                                    <div class="hero-content text-white">
-                                        <span class="sub-title">Welcome to Halisi Africa Discoveries</span>
-                                        <h1 data-animation="fadeInDown" data-delay=".4s">Learn ∙ Travel ∙ Explore</h1>
-                                        <div class="hero-button" data-animation="fadeInRight" data-delay=".6s">
-                                            <a href="about.html" class="main-btn primary-btn">Explore More<i class="fas fa-paper-plane"></i></a>
-                                            <a href="about.html" class="main-btn secondary-btn">Learn More<i class="fas fa-paper-plane"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--=== Single Slider ===-->
-                    <div class="single-slider">
-                        <div class="image-layer bg_cover" style="background-image: url('{{asset('theme/assets/images/hero/hero-three_img-2.jpg')}}');"></div>
-                        <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col-xl-7">
-                                    <!--=== Hero Content ===-->
-                                    <div class="hero-content text-white">
-                                        <span class="sub-title">Welcome to Halisi Africa Discoveries</span>
-                                        <h1 data-animation="fadeInDown" data-delay=".4s">Tour Travel
-                                            & Camping</h1>
-                                        <div class="hero-button" data-animation="fadeInRight" data-delay=".6s">
-                                            <a href="about.html" class="main-btn primary-btn">Explore More<i class="fas fa-paper-plane"></i></a>
-                                            <a href="about.html" class="main-btn secondary-btn">Learn More<i class="fas fa-paper-plane"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--=== Single Slider ===-->
-                    <div class="single-slider">
-                        <div class="image-layer bg_cover" style="background-image: url('{{asset('theme/assets/images/hero/hero-three_img-3.jpg')}}');"></div>
-                        <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col-xl-7">
-                                    <!--=== Hero Content ===-->
-                                    <div class="hero-content text-white">
-                                        <span class="sub-title">Welcome to Halisi Africa Discoveries</span>
-                                        <h1 data-animation="fadeInDown" data-delay=".4s">Tour Travel
-                                            & Adventure</h1>
-                                        <div class="hero-button" data-animation="fadeInRight" data-delay=".6s">
-                                            <a href="about.html" class="main-btn primary-btn">Explore More<i class="fas fa-paper-plane"></i></a>
-                                            <a href="about.html" class="main-btn secondary-btn">Learn More<i class="fas fa-paper-plane"></i></a>
-                                        </div>
+     <!--====== Start Hero Section ======-->
+     <section class="hero-section">
+        <!--=== Hero Wrapper ===-->
+        <div class="hero-wrapper-two">
+            <!--=== Hero Slider ===-->
+            <div class="hero-slider-two">
+                <!--=== Single Slider ===-->
+                <div class="single-slider">
+                    <div class="image-layer bg_cover" style="background-image: url('{{url('/')}}/uploads/slider/pexels-africa-vacation-safaris-3529692.jpg');"></div>
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-9">
+                                <!--=== Hero Content ===-->
+                                <div class="hero-content text-white text-center">
+                                    <span class="ribbon">Sustainable Tourism</span>
+                                    <h1 data-animation="fadeInDown" data-delay=".4s">Learn ∙ Travel ∙ Explore</h1>
+                                    <div class="hero-button" data-animation="fadeInRight" data-delay=".6s">
+                                        <a href="{{url('/')}}/about-us" class="main-btn primary-btn">Explore More<i class="fas fa-paper-plane"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--=== Single Slider ===-->
+                <!--=== Single Slider ===-->
+                <div class="single-slider">
+                    <div class="image-layer bg_cover" style="background-image: url('{{url('/')}}/uploads/slider/pexels-twilight-kenya-11866350.jpg');"></div>
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-9">
+                                <!--=== Hero Content ===-->
+                                <div class="hero-content text-white text-center">
+                                    <span class="ribbon">Amaizing Amboseli</span>
+                                    <h1 data-animation="fadeInDown" data-delay=".4s">Learn ∙ Travel ∙ Explore</h1>
+                                    <div class="hero-button" data-animation="fadeInRight" data-delay=".6s">
+                                        <a href="{{url('/')}}/about-us" class="main-btn primary-btn">Explore More<i class="fas fa-paper-plane"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--=== Single Slider ===-->
+                <!--=== Single Slider ===-->
+                <div class="single-slider">
+                    <div class="image-layer bg_cover" style="background-image: url('{{url('/')}}/uploads/slider/pexels-nirav-shah-15904775.jpg');"></div>
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-9">
+                                <!--=== Hero Content ===-->
+                                <div class="hero-content text-white text-center">
+                                    <span class="ribbon">Welcome to Halisi Africa Discoveries</span>
+                                    <h1 data-animation="fadeInDown" data-delay=".4s"><strong>Learn ∙ Travel ∙ Explore</strong></h1>
+                                    <div class="hero-button" data-animation="fadeInRight" data-delay=".6s">
+                                        <a href="about.html" class="main-btn primary-btn">Explore More<i class="fas fa-paper-plane"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{--  --}}
             </div>
-        </section><!--====== End Hero Section ======-->
+        </div>
+    </section><!--====== End Hero Section ======-->
         <!--====== Start Features Section ======-->
 
         <!--====== Start About Section ======-->
