@@ -139,9 +139,7 @@
                                     <li class="menu-item has-children"><a href="{{url('/contact-us')}}">Contact Us</a>
 
                                     </li>
-                                    <li class="menu-item search-item">
-                                        <div class="search-btn" data-bs-toggle="modal" data-bs-target="#search-modal"><i class="far fa-search"></i></div>
-                                    </li>
+
                                 </ul>
                             </nav>
                             <!--====== Menu Button ======-->

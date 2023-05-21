@@ -76,6 +76,7 @@
                     <div class="col-lg-6">
                         <!--=== About Image Box ===-->
                         <div class="about-image-box mbs-50">
+                            <br> <br>
                             <img src="{{url('/')}}/uploads/banners/pexels-twilight-kenya-11866350.jpg" class="rounded-2" alt="About Image">
                         </div>
                     </div>
@@ -88,15 +89,13 @@
                                 <h2>We’re Number #1 Travel
                                     Adventure Partner</h2>
                             </div>
-                            <p class="mb-30">Sit amet consectetur. Velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus
-                                Ultrices eget leo cras odio blandit rhoncus eues feugiat
+                            <p class="mb-30">
+                                Halisi Africa Discoveries is a premier tour planning company that combines a passion for women empowerment and environmental sustainability. We are committed to creating unique and memorable travel experiences while promoting social and ecological responsibility. Our company is dedicated to empowering women and protecting the environment through sustainable practices.
                             </p>
-                            <p class="mb-30">Sit amet consectetur. Velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus
-                                Ultrices eget leo cras odio blandit rhoncus eues feugiat
+                            <p class="mb-30">
+                                We at Halisi Africa Discoveries are dedicated to making a difference in society. We actively work with neighborhood groups and NGOs to support initiatives for community development, environmental preservation, and women's empowerment. In order to have a long-lasting impact on the communities we work with, a portion of our profits are invested in these initiatives.
                             </p>
-                            <p class="mb-30">Sit amet consectetur. Velit integer tincidunt sceleries nodalesry volutpat neque fermentum malesuada sceleris quecy massa lacus
-                                Ultrices eget leo cras odio blandit rhoncus eues feugiat
-                            </p>
+
 
                         </div>
                     </div>
@@ -261,98 +260,7 @@
             </div>
         </section><!--====== End CTA Section ======-->
         <!--====== Start What We Section ======-->
-        <section class="we-section pt-100 pb-50">
-            <div class="container">
-                <div class="row align-items-xl-center">
-                    <div class="col-xl-6 order-2 order-xl-1">
-                        <!--=== We Image Box ===-->
-                        <div class="we-two_image-box mb-20">
-                            <div class="row align-items-end">
-                                <div class="col-md-6">
-                                    <!--=== We Image ===-->
-                                    <div class="we-image mb-30">
-                                        <img src="{{url('/')}}/uploads/destinations/ol-seki-hemingways-lodge-mara-naboisho-small.jpg" alt="we Image">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!--=== We Image ===-->
-                                    <div class="we-image mb-30">
-                                        <img src="{{url('/')}}/uploads/destinations/hot-air-balloon-safari-masai-mara-kenya-small.jpg" alt="we Image">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <!--=== We Image ===-->
-                                    <div class="we-image mb-30 pr-lg-30 text-md-end">
-                                        <img src="{{url('/')}}/uploads/destinations/Amboseli-National-park-weather.jpg" alt="we Image">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 order-1 order-xl-2">
-                        <!--=== We Content Box ===-->
-                        <div class="we-content-box pl-lg-50 mb-10">
-                            <!--=== Section Title ===-->
-                            <div class="section-title mb-30">
-                                <span class="sub-title">Why choose us</span>
-                                <h2>Great Opportunity For
-                                    Adventure & Travels</h2>
-                            </div>
-                            <!--=== Features List ===-->
-                            <div class="features-list_one">
-                                <!--=== Single Features List ===-->
-                                <div class="single-features-list mb-40">
-                                    <div class="icon-inner d-flex align-items-center">
-                                        <div class="icon-check">
-                                            <i class="fas fa-badge-check"></i>
-                                        </div>
-                                        <div class="icon">
-                                            <i class="flaticon-helmet"></i>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Safety First Always</h4>
-                                        <p>Set perspiciatis unde omnis estenatus voluptatem
-                                            accusantium laudantium totarem aperiae</p>
-                                    </div>
-                                </div>
-                                <!--=== Single Features List ===-->
-                                <div class="single-features-list mb-40">
-                                    <div class="icon-inner d-flex align-items-center">
-                                        <div class="icon-check">
-                                            <i class="fas fa-badge-check"></i>
-                                        </div>
-                                        <div class="icon">
-                                            <i class="flaticon-best-price"></i>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Low Price & Friendly</h4>
-                                        <p>Quis autem vel eum iure reprehenderit voluptate velit esse nihile molestiae consequatur.</p>
-                                    </div>
-                                </div>
-                                <!--=== Single Features List ===-->
-                                <div class="single-features-list mb-40">
-                                    <div class="icon-inner d-flex align-items-center">
-                                        <div class="icon-check">
-                                            <i class="fas fa-badge-check"></i>
-                                        </div>
-                                        <div class="icon">
-                                            <i class="flaticon-travel"></i>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Trusted Travel Guide</h4>
-                                        <p>At vero accusamus dignissimos ducimus blanditiis
-                                            praesentium voluptatum deleniti atque quos</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!--====== End What We Section ======-->
+        @include('front.why')
         <!--====== Start Gallery Section ======-->
         <section class="gallery-section-two pb-100">
             <div class="container-fluid">
