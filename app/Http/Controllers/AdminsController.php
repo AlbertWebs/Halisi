@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Auth;
 
-use Illuminate\Support\Facades\Redirect; 
+use Illuminate\Support\Facades\Redirect;
 
 use Illuminate\Support\Str;
 
@@ -22,139 +22,131 @@ use Session;
 
 use datetime;
 
-use App\Term;
+use App\Models\Term;
 
-use App\Country;
+use App\Models\Country;
 
-use App\Models;
+use App\Models\Models;
 
 use App\Models\Extra;
 
-use App\Transfer;
+use App\Models\Transfer;
 
-use App\Privacy;
+use App\Models\Privacy;
 
-use App\Booking;
+use App\Models\Booking;
 
-use App\CarType;
+use App\Models\CarType;
 
-use App\Duration;
+use App\Models\Duration;
 
 use App\Models\Sample;
 
-use App\Location;
+use App\Models\Location;
 
-use App\Car;
+use App\Models\Car;
 
-use App\Fuel;
+use App\Models\Fuel;
 
-use App\Gallery;
+use App\Models\Gallery;
 
-use App\Itinery;
+use App\Models\Itinery;
 
-use App\Admin;
+use App\Models\Admin;
 
-use App\User;
+use App\Models\User;
 
-use App\Page;
+use App\Models\Page;
 
-use App\Slider;
+use App\Models\Slider;
 
-use App\Order;
+use App\Models\Order;
 
-use App\Banner;
+use App\Models\Banner;
 
-use App\Certificate;
+use App\Models\Certificate;
 
-use App\Page_Settings;
+use App\Models\Page_Settings;
 
-use App\Message;
+use App\Models\Message;
 
-use App\ReplyMessage;
+use App\Models\ReplyMessage;
 
-use App\Category;
+use App\Models\Category;
 
-use App\SubCategory;
+use App\Models\SubCategory;
 
-use App\Lesson;
+use App\Models\Lesson;
 
-use App\Topic;
+use App\Models\Topic;
 
-use App\Product;
+use App\Models\Product;
 
-use App\Services;
+use App\Models\Services;
 
-use App\Portfolio;
+use App\Models\Portfolio;
 
-use App\Pricing;
+use App\Models\Pricing;
 
-use App\Subscriber;
+use App\Models\Subscriber;
 
-use App\Update;
+use App\Models\Update;
 
-use App\Payment;
+use App\Models\Payment;
 
-use App\Notifications;
+use App\Models\Notifications;
 
-use App\Testimonial;
+use App\Models\Testimonial;
 
-use App\Service_Rendered;
+use App\Models\Service_Rendered;
 
-use App\Daily;
+use App\Models\Daily;
 
-use App\Blog;
+use App\Models\Blog;
 
-use App\Comment;
+use App\Models\Comment;
 
-use App\TraceServices;
+use App\Models\TraceServices;
 
-use App\Quote;
+use App\Models\Quote;
 
-use App\ServiceRequest;
+use App\Models\ServiceRequest;
 
-use App\Teacher;
+use App\Models\Teacher;
 
-use App\Register;
+use App\Models\Register;
 
-use App\Material;
+use App\Models\Material;
 
-use App\Curriculum;
+use App\Models\Curriculum;
 
-use App\Examinfo;
+use App\Models\Examinfo;
 
-use App\Question;
+use App\Models\Question;
 
-use App\Event;
+use App\Models\Event;
 
-use App\Destination;
+use App\Models\Destination;
 
-use App\Experience;
+use App\Models\Experience;
 
-use App\Guide;
+use App\Models\Guide;
 
-use App\Student;
+use App\Models\Student;
 
-use App\Hotel;
+use App\Models\Hotel;
 
-use App\Room;
+use App\Models\Room;
 
 
 
 class AdminsController extends Controller
 {
-     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct(){
-        $this->middleware('auth:admin');
-    }
 
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Http\Response 
+     * @return \Illuminate\Http\Response
      */
 
     //  Home Page
@@ -220,7 +212,7 @@ class AdminsController extends Controller
         $page_title = 'Error';
         return view('admin.503',compact('page_title'));
     }
-   
+
 
     public function under_construction(){
         $page_title = 'Website Is Under Construction';
@@ -276,7 +268,7 @@ class AdminsController extends Controller
             'sitename'=>$request->sitename,
             'logo'=>$logo,
             'logoo'=>$logoo,
-            'favicon'=>$favicon, 
+            'favicon'=>$favicon,
             'email'=>$request->email,
             'email_one'=>$request->email_one,
             'mobile'=>$request->mobile,
@@ -297,7 +289,7 @@ class AdminsController extends Controller
             'google'=>$request->google,
             'payment'=>$request->payment,
             'welcome'=>$request->welcome
-            
+
         );
         DB::table('sitesettings')->update($updateDetails);
         Session::flash('message', "Changes have Been Saved");
@@ -346,7 +338,7 @@ class AdminsController extends Controller
         Session::flash('message', "Changes have Been Saved");
         return Redirect::back();
     }
-    // 
+    //
     public function abouts(){
         $About = DB::table('about')->get();
         $page_title = 'formfiletext';//For Style Inheritance
@@ -354,7 +346,7 @@ class AdminsController extends Controller
         return view('admin.abouts',compact('page_title','page_name','About'));
     }
     public function abouts_save(Request $request){
-       
+
         $updateDetails = array(
             'contents'=>$request->content,
 
@@ -365,7 +357,7 @@ class AdminsController extends Controller
         return Redirect::back();
     }
 
-    // 
+    //
 
     public function how(){
         $How = DB::table('how')->get();
@@ -375,10 +367,10 @@ class AdminsController extends Controller
     }
 
     public function how_save(Request $request){
-       
+
         $updateDetails = array(
             'content'=>$request->content,
-           
+
         );
         DB::table('how')->update($updateDetails);
 
@@ -453,7 +445,7 @@ class AdminsController extends Controller
         $Privacy = Privacy::find($id);
         $page_name = $Privacy->title;
         $page_title = 'formfiletext';//For Style Inheritance
-        
+
         return view('admin.editPrivacy')->with('Privacy',$Privacy)->with('page_name',$page_name)->with('page_title',$page_title);
     }
 
@@ -488,7 +480,7 @@ class AdminsController extends Controller
 
     public function addGallery(){
         $page_title = 'formfiletext';
-       
+
         $page_name =  'Add Image';
         return view('admin.addGallery',compact('page_title','page_name'));
     }
@@ -505,8 +497,8 @@ class AdminsController extends Controller
             $Gallery->save();
             Session::flash('message', "Image Added To Gallery");
             return Redirect::back();
-       
-    } 
+
+    }
 
     public function save_gallery(Request $request, $id){
         $path = 'uploads/gallery';
@@ -527,7 +519,7 @@ class AdminsController extends Controller
         Session::flash('message', "Changes have been saved");
         return Redirect::back();
     }
-    
+
     public function galleryList(){
         $page_title = 'list';
         $page_name = 'Image Gallery';
@@ -547,12 +539,12 @@ class AdminsController extends Controller
 
     public function add_Admin(Request $request){
         $path = 'uploads/admins';
-        
+
         $file = $request->file('image');
         $filename = $file->getClientOriginalName();
         $file->move($path, $filename);
         $image = $filename;
-        
+
         $password_inSecured = $request->password;
         //harshing password Here
         $password = Hash::make($password_inSecured);
@@ -578,7 +570,7 @@ class AdminsController extends Controller
         $Admin = Admin::find($newID);
         $page_title = 'formfiletext';//For Style Inheritance
         $page_name = 'Edit Site Administrator';
-       
+
         return view('admin.editAdmin',compact('page_title','Admin','page_name'));
     }
 
@@ -590,9 +582,9 @@ class AdminsController extends Controller
                 if($fileSize>=1800000){
                    Session::flash('message', "File Exceeded the maximum allowed Size");
                    Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-                   
+
                 }else{
-                   
+
                     $file = $request->file('image');
                     $filename = str_replace(' ', '', $file->getClientOriginalName());
                     $timestamp = new Datetime();
@@ -626,9 +618,9 @@ class AdminsController extends Controller
                 if($fileSize>=1800000){
                    Session::flash('message', "File Exceeded the maximum allowed Size");
                    Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-                   
+
                 }else{
-                   
+
                     $file = $request->file('image');
                     $filename = str_replace(' ', '', $file->getClientOriginalName());
                     $timestamp = new Datetime();
@@ -658,12 +650,12 @@ class AdminsController extends Controller
             return Redirect::back();
         }
     }
-    
+
 
     public function deleteAdmin($id){
         if($id==1){
             echo "<script>alert('You cannot Delete the Supper Admin)</script>";
-            
+
             return Redirect::back();
         }else{
             DB::table('admins')->where('id',$id)->delete();
@@ -710,7 +702,7 @@ class AdminsController extends Controller
     public function deleteUser($id){
         if($id==1){
             echo "<script>alert('You cannot Delete the Supper Admin)</script>";
-            
+
             return Redirect::back();
         }else{
             DB::table('users')->where('id',$id)->delete();
@@ -773,7 +765,7 @@ class AdminsController extends Controller
             $thumbnail = $request->thumbnail_cheat;
         }
 
-        
+
         $updateDetails = array(
             'name'=>$request->name,
             'content' =>$request->content,
@@ -803,13 +795,13 @@ class AdminsController extends Controller
         $page_name = 'Site Banner';
         return view('admin.editBanner',compact('page_title','Banner','page_name'));
     }
-    
+
     public function edit_Banner(Request $request, $id){
         $path = 'uploads/banners';
         if(isset($request->image)){
             $file = $request->file('image');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
-            
+
             $file->move($path, $filename);
             $image = $filename;
         }else{
@@ -841,7 +833,7 @@ class AdminsController extends Controller
                 Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
                 return Redirect::back();
                 }else{
-                
+
                 $file = $request->file('image_one');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -859,9 +851,9 @@ class AdminsController extends Controller
              if($fileSize>=1800000){
                 Session::flash('message', "File Exceeded the maximum allowed Size");
                 Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-                
+
              }else{
-                
+
                 $file = $request->file('image_two');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -873,16 +865,16 @@ class AdminsController extends Controller
         }else{
             $image_two = $request->pro_img_cheat;
         }
- 
-        
+
+
         if(isset($request->image_three)){
             $fileSize = $request->file('image_three')->getClientSize();
             if($fileSize>=1800000){
                Session::flash('message', "File Exceeded the maximum allowed Size");
                Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-               
+
             }else{
-               
+
                 $file = $request->file('image_three');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -895,15 +887,15 @@ class AdminsController extends Controller
             $image_three = $request->pro_img_cheat;
         }
         //Additional images
-        
+
         if(isset($request->image_four)){
             $fileSize = $request->file('image_four')->getClientSize();
             if($fileSize>=1800000){
                Session::flash('message', "File Exceeded the maximum allowed Size");
                Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-               
+
             }else{
-            
+
                 $file = $request->file('image_four');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -915,17 +907,17 @@ class AdminsController extends Controller
         }else{
             $image_four = $request->pro_img_cheat;
         }
- 
-        
- 
+
+
+
         if(isset($request->image_five)){
             $fileSize = $request->file('image_five')->getClientSize();
             if($fileSize>=1800000){
                Session::flash('message', "File Exceeded the maximum allowed Size");
                Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-               
+
             }else{
-                
+
                 $file = $request->file('image_five');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -946,7 +938,7 @@ class AdminsController extends Controller
         $Page->image_four = $image_four;
         $Page->image_five = $image_five;
         $Page->save();
-        
+
 
         $Page_Settings = new Page_Settings;
         $Page_Settings->page_name = $request->name;
@@ -968,7 +960,7 @@ class AdminsController extends Controller
         $page_name = 'Edit Page';
         return view('admin.editPage',compact('page_title','Page','page_name'));
     }
-    
+
     public function setPage($name){
         $Page = DB::table('pages_settings')->where('page_name',$name)->get();
         $page_title = 'formfiletext';
@@ -999,7 +991,7 @@ class AdminsController extends Controller
                 Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
                 return Redirect::back();
                 }else{
-                
+
                 $file = $request->file('image_one');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -1017,9 +1009,9 @@ class AdminsController extends Controller
              if($fileSize>=1800000){
                 Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
                 Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-                
+
              }else{
-                
+
                 $file = $request->file('image_two');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -1031,16 +1023,16 @@ class AdminsController extends Controller
         }else{
             $image_two = $request->image_two_cheat;
         }
- 
-        
+
+
         if(isset($request->image_three)){
             $fileSize = $request->file('image_three')->getClientSize();
             if($fileSize>=1800000){
                Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
                Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-               
+
             }else{
-               
+
                 $file = $request->file('image_three');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -1053,15 +1045,15 @@ class AdminsController extends Controller
             $image_three = $request->image_three_cheat;
         }
         //Additional images
-        
+
         if(isset($request->image_four)){
             $fileSize = $request->file('image_four')->getClientSize();
             if($fileSize>=1800000){
                Session::flash('message_image_four', "File Exceeded the maximum allowed Size");
                Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-               
+
             }else{
-            
+
                 $file = $request->file('image_four');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -1073,17 +1065,17 @@ class AdminsController extends Controller
         }else{
             $image_four = $request->image_four_cheat;
         }
- 
-        
- 
+
+
+
         if(isset($request->image_five)){
             $fileSize = $request->file('image_five')->getClientSize();
             if($fileSize>=1800000){
                Session::flash('message_image_five', "File Exceeded the maximum allowed Size");
                Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-               
+
             }else{
-                
+
                 $file = $request->file('image_five');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -1133,7 +1125,7 @@ class AdminsController extends Controller
         $subject = $request->subject;
         $name = $request->name;
         $email = $request->email;
-        
+
         //Call The Generic Reply Class
         ReplyMessage::SendMessage($reply,$subject,$name,$email,$id);
     }
@@ -1142,7 +1134,7 @@ class AdminsController extends Controller
         return Redirect::back();
     }
 
-        
+
 public function categories(){
     $Category = Category::all();
     $page_title = 'list';
@@ -1157,10 +1149,10 @@ public function addCategory(){
 }
 
 public function add_Category(Request $request){
-    
+
     $Category = new Category;
     $Category->cat = $request->name;
-    
+
     $Category->save();
     Session::flash('message', "Category Has Been Added");
     return Redirect::back();
@@ -1187,7 +1179,7 @@ public function edit_Category(Request $request, $id){
         'cat'=>$request->name,
         // 'description'=>$request->content,
         'image'=>$image
-      
+
     );
     DB::table('category')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -1213,11 +1205,11 @@ public function addSubCategory(){
 }
 
 public function add_SubCategory(Request $request){
-    
+
     $SubCategory = new SubCategory;
     $SubCategory->name = $request->name;
     $SubCategory->cat_id = $request->cat_id;
-    
+
     $SubCategory->save();
     Session::flash('message', "Category Has Been Added");
     return Redirect::back();
@@ -1231,11 +1223,11 @@ public function editSubCategories($id){
 }
 
 public function edit_SubCategory(Request $request, $id){
-    
+
     $updateDetails = array(
         'cat_id'=>$request->cat_id,
         'name' =>$request->name,
-      
+
     );
     DB::table('sub_category')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -1263,7 +1255,7 @@ public function add_Product(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1281,9 +1273,9 @@ public function add_Product(Request $request){
          if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1296,15 +1288,15 @@ public function add_Product(Request $request){
         $image_two = $request->pro_img_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1317,7 +1309,7 @@ public function add_Product(Request $request){
         $image_three = $request->pro_img_cheat;
     }
     //Additional images
-    
+
 
     $Product = new Product;
     $Product->name = $request->name;
@@ -1330,9 +1322,9 @@ public function add_Product(Request $request){
     $Product->image_one = $image_one;
     $Product->image_two = $image_two;
     $Product->image_three = $image_three;
- 
+
     $Product->save();
-    
+
     Session::flash('message', "You have Added One New Product");
     return Redirect::back();
 }
@@ -1364,7 +1356,7 @@ public function edit_Product(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1382,9 +1374,9 @@ public function edit_Product(Request $request, $id){
          if($fileSize>=1800000){
             Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1397,15 +1389,15 @@ public function edit_Product(Request $request, $id){
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1418,8 +1410,8 @@ public function edit_Product(Request $request, $id){
         $image_three = $request->image_three_cheat;
     }
     //Additional images
-    
-   
+
+
 
     $updateDetails = array(
         'name' => $request->name,
@@ -1443,7 +1435,7 @@ public function deleteProduct($id){
     foreach($Curriculum as $curriculum){
         DB::table('materials')->where('curriculum_id',$curriculum->id)->delete();
     }
-    
+
     DB::table('curriculum')->where('course_id',$id)->delete();
     DB::table('product')->where('id',$id)->delete();
     return Redirect::back();
@@ -1468,7 +1460,7 @@ public function add_Service(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1486,9 +1478,9 @@ public function add_Service(Request $request){
          if($fileSize>=1800000){
             Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1501,15 +1493,15 @@ public function add_Service(Request $request){
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1528,9 +1520,9 @@ public function add_Service(Request $request){
     $Services->image_one = $image_one;
     $Services->image_two = $image_two;
     $Services->image_three = $image_three;
-    
+
     $Services->save();
-  
+
     Session::flash('message', "Service Has Been Added");
     return Redirect::back();
 }
@@ -1559,7 +1551,7 @@ public function edit_Services(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1577,9 +1569,9 @@ public function edit_Services(Request $request, $id){
          if($fileSize>=1800000){
             Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1592,15 +1584,15 @@ public function edit_Services(Request $request, $id){
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1613,7 +1605,7 @@ public function edit_Services(Request $request, $id){
         $image_three = $request->image_three_cheat;
     }
 
-   
+
 
     $updateDetails = array(
         'title' => $request->name,
@@ -1621,7 +1613,7 @@ public function edit_Services(Request $request, $id){
         'image_one' =>$image_one,
         'image_two' =>$image_two,
         'image_three' =>$image_three,
-        
+
     );
     DB::table('services')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -1630,7 +1622,7 @@ public function edit_Services(Request $request, $id){
 
 public function deleteService($id){
     DB::table('services')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 
@@ -1650,7 +1642,7 @@ public function add_Portfolio(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1668,9 +1660,9 @@ public function add_Portfolio(Request $request){
          if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1683,15 +1675,15 @@ public function add_Portfolio(Request $request){
         $image_two = $request->pro_img_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1704,15 +1696,15 @@ public function add_Portfolio(Request $request){
         $image_three = $request->pro_img_cheat;
     }
     //Additional images
-    
+
     if(isset($request->image_four)){
         $fileSize = $request->file('image_four')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-        
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1725,16 +1717,16 @@ public function add_Portfolio(Request $request){
         $image_four = $request->pro_img_cheat;
     }
 
-    
+
 
     if(isset($request->image_five)){
         $fileSize = $request->file('image_five')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-            
+
             $file = $request->file('image_five');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1758,9 +1750,9 @@ public function add_Portfolio(Request $request){
     $Portfolio->image_three = $image_three;
     $Portfolio->image_four = $image_four;
     $Portfolio->image_five = $image_five;
-    
+
     $Portfolio->save();
-  
+
     Session::flash('message', "Portfolio Has Been Added");
     return Redirect::back();
 }
@@ -1789,7 +1781,7 @@ public function edit_Portfolio(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1807,9 +1799,9 @@ public function edit_Portfolio(Request $request, $id){
          if($fileSize>=1800000){
             Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1822,15 +1814,15 @@ public function edit_Portfolio(Request $request, $id){
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1843,15 +1835,15 @@ public function edit_Portfolio(Request $request, $id){
         $image_three = $request->image_three_cheat;
     }
     //Additional images
-    
+
     if(isset($request->image_four)){
         $fileSize = $request->file('image_four')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_four', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-        
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1864,16 +1856,16 @@ public function edit_Portfolio(Request $request, $id){
         $image_four = $request->image_four_cheat;
     }
 
-    
+
 
     if(isset($request->image_five)){
         $fileSize = $request->file('image_five')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_five', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-            
+
             $file = $request->file('image_five');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -1886,7 +1878,7 @@ public function edit_Portfolio(Request $request, $id){
         $image_five = $request->image_five_cheat;
     }
 
-   
+
 
     $updateDetails = array(
         'title' => $request->name,
@@ -1899,7 +1891,7 @@ public function edit_Portfolio(Request $request, $id){
         'image_three' =>$image_three,
         'image_four' =>$image_four,
         'image_five' =>$image_five
-        
+
     );
     DB::table('portfolio')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -1908,7 +1900,7 @@ public function edit_Portfolio(Request $request, $id){
 
 public function deletePortfolio($id){
     DB::table('portfolio')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 
@@ -1947,14 +1939,14 @@ public function add_Pricing(Request $request){
 
 public function edit_Pricing(Request $request, $id){
     $updateDetails = array(
-      
+
         'content' => $request->content,
         'service' => $request->service,
         'budget' => $request->budget,
         'price' => $request->price,
         'frequency' =>$request->frequency,
-       
-        
+
+
     );
     DB::table('pricing')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -1963,7 +1955,7 @@ public function edit_Pricing(Request $request, $id){
 
 public function deletePricing($id){
     DB::table('pricing')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 
@@ -1992,7 +1984,7 @@ public function mailSubscribers($email){
 }
 public function deleteSubscriber($id){
     DB::table('subscribers')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 
@@ -2055,7 +2047,7 @@ public function add_Testimonial(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2068,9 +2060,9 @@ public function add_Testimonial(Request $request){
         $image_one = $request->pro_img_cheat;
     }
 
-    
 
-   
+
+
 
     $Testimonial = new Testimonial;
     $Testimonial->name = $request->name;
@@ -2079,11 +2071,11 @@ public function add_Testimonial(Request $request){
     $Testimonial->service = $request->service;
     $Testimonial->position = $request->position;
     $Testimonial->rating = $request->rating;
-    
+
     $Testimonial->image = $image_one;
-     
+
     $Testimonial->save();
-  
+
     Session::flash('message', "Testimonial Has Been Added");
     return Redirect::back();
 }
@@ -2112,7 +2104,7 @@ public function edit_Testimonial(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2126,7 +2118,7 @@ public function edit_Testimonial(Request $request, $id){
     }
 
 
-   
+
 
     $updateDetails = array(
         'name' => $request->name,
@@ -2135,8 +2127,8 @@ public function edit_Testimonial(Request $request, $id){
         'company' => $request->company,
         'position' => $request->position,
         'image' =>$image_one,
-        
-        
+
+
     );
     DB::table('testimonial')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -2145,7 +2137,7 @@ public function edit_Testimonial(Request $request, $id){
 
 public function deleteTestimonial($id){
     DB::table('testimonial')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 
@@ -2161,7 +2153,7 @@ public function add_Service_rendered(Request $request){
     $Service_Rendered->name = $request->name;
     $Service_Rendered->cat = $request->cat;
     $Service_Rendered->save();
-  
+
     Session::flash('message', "Service Rendered Has Been Added");
     return Redirect::back();
 }
@@ -2182,12 +2174,12 @@ public function editService_rendered($id){
 
 
 public function edit_Service_rendered(Request $request, $id){
-    
+
 
     $updateDetails = array(
         'name' => $request->name,
         'cat' => $request->cat,
-           
+
     );
     DB::table('service_delivered')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -2196,7 +2188,7 @@ public function edit_Service_rendered(Request $request, $id){
 
 public function deleteService_rendered($id){
     DB::table('service_delivered')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 //Dailies
@@ -2211,7 +2203,7 @@ public function add_Daily(Request $request){
     $Daily->author = $request->author;
     $Daily->content = $request->content;
     $Daily->save();
-  
+
     Session::flash('message', "Daily Quote Has Been Added");
     return Redirect::back();
 }
@@ -2232,12 +2224,12 @@ public function editDaily($id){
 
 
 public function edit_Daily(Request $request, $id){
-    
+
 
     $updateDetails = array(
         'author' => $request->author,
         'content' => $request->content,
-           
+
     );
     DB::table('daily')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -2246,7 +2238,7 @@ public function edit_Daily(Request $request, $id){
 
 public function deleteDaily($id){
     DB::table('daily')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 // Blog Controls
@@ -2263,19 +2255,19 @@ public function addBlog(){
 public function add_Blog(Request $request){
     $title = $request->title;
     $description = $request->content;
-   
-  
+
+
     $author = Auth::user()->name;
     $category = $request->cat;
     $path = 'uploads/blog';
-    if(isset($request->image_one)){ 
+    if(isset($request->image_one)){
         $fileSize = $request->file('image_one')->getClientSize();
             if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2293,9 +2285,9 @@ public function add_Blog(Request $request){
          if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2308,15 +2300,15 @@ public function add_Blog(Request $request){
         $image_two = $request->pro_img_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2329,15 +2321,15 @@ public function add_Blog(Request $request){
         $image_three = $request->pro_img_cheat;
     }
     //Additional images
-    
+
     if(isset($request->image_four)){
         $fileSize = $request->file('image_four')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-        
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2355,9 +2347,9 @@ public function add_Blog(Request $request){
     }else{
         $video = "0";
     }
-   
 
-    $blog = new Blog; 
+
+    $blog = new Blog;
     $blog->title = $title;
     $blog->slung =  Str::slug($title);
     $blog->link = $request->link;
@@ -2372,11 +2364,11 @@ public function add_Blog(Request $request){
     Session::flash('message', "Changes Saved Successfully");
     return Redirect::back();
 
-    
- 
-    
+
+
+
     $Blog->save();
-  
+
     Session::flash('message', "Blog Has Been Added");
     return Redirect::back();
 }
@@ -2405,7 +2397,7 @@ public function edit_Blog(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2423,9 +2415,9 @@ public function edit_Blog(Request $request, $id){
          if($fileSize>=1800000){
             Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2438,15 +2430,15 @@ public function edit_Blog(Request $request, $id){
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2459,15 +2451,15 @@ public function edit_Blog(Request $request, $id){
         $image_three = $request->image_three_cheat;
     }
     //Additional images
-    
+
     if(isset($request->image_four)){
         $fileSize = $request->file('image_four')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_four', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-        
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2501,7 +2493,7 @@ public function edit_Blog(Request $request, $id){
         'image_two' =>$image_two,
         'image_three' =>$image_three,
         'image_four' =>$image_four,
-        
+
     );
     DB::table('blog')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -2510,7 +2502,7 @@ public function edit_Blog(Request $request, $id){
 
 public function delete_Blog($id){
     DB::table('blog')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 
@@ -2528,7 +2520,7 @@ public function approve($id){
 
 public function decline($id){
     DB::table('comments')->where('id',$id)->delete();
-   
+
     Session::flash('message-comment', "Comment Has Been Deleted");
     return Redirect::back();
 }
@@ -2576,16 +2568,16 @@ public function add_TraceServices(Request $request){
 
 public function edit_TraceServices(Request $request, $id){
     $updateDetails = array(
-      
-        
+
+
         'user_id' => $request->user_id,
         'invoice' => $request->invoice,
         'title' => $request->title,
         'due' =>$request->due,
         'price' => $request->price,
         'frequency' =>$request->frequency,
-       
-        
+
+
     );
     DB::table('traceservices')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -2594,7 +2586,7 @@ public function edit_TraceServices(Request $request, $id){
 
 public function deleteTraceServices($id){
     DB::table('traceservices')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 
@@ -2618,7 +2610,7 @@ public function markRequest($id,$status,$type){
     if($type == 'quote'){
         DB::table('quoterequests')->where('id',$id)->update($updateDetails);
     }else{
-        
+
         DB::table('servicerequests')->where('id',$id)->update($updateDetails);
     }
     return Redirect::back();
@@ -2651,7 +2643,7 @@ public function add_Teacher(Request $request){
     $Teacher = new Teacher;
     $Teacher->name = $request->name;
     $Teacher->image = $image;
-    
+
     $Teacher->save();
     Session::flash('message', "Instructor Has Been Added");
     return Redirect::back();
@@ -2677,7 +2669,7 @@ public function edit_Teacher(Request $request, $id){
     $updateDetails = array(
         'name'=>$request->name,
         'image'=>$image,
-      
+
     );
     DB::table('teachers')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -2690,9 +2682,9 @@ public function deleteTeacher($id){
 }
 public function approvepay($id,$status){
     if($status == 1){
-       $status_new = 0; 
+       $status_new = 0;
     }else{
-       $status_new = 1; 
+       $status_new = 1;
     }
     $updateDetails = array(
         'status'=>$status_new,
@@ -2728,14 +2720,14 @@ public function editCurriculum($id){
 }
 
 public function addCurriculum(){
-    
+
     $page_title = 'formfiletext';
     $page_name = 'AddCurriculum';
     return view('admin.addCurriculum',compact('page_title','page_name'));
 }
 
 public function addMaterial(){
-    
+
     $page_title = 'formfiletext';
     $page_name = 'addMaterial';
     return view('admin.addMaterial',compact('page_title','page_name'));
@@ -2750,7 +2742,7 @@ public function add_material(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('pdf');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2765,7 +2757,7 @@ public function add_material(Request $request){
     $curriculum_id = $request->curriculum_id;
     $video = $request->video;
     $audio = $request->audio;
-    
+
     $Material = new Material;
     $Material->curriculum_id = $curriculum_id;
     $Material->video = $video;
@@ -2773,7 +2765,7 @@ public function add_material(Request $request){
     $Material->title = $request->title;
     $Material->pdf = $pdf;
     $Material->save();
-    
+
     Session::flash('message', "Material has Been added");
     return Redirect::back();
 }
@@ -2799,14 +2791,14 @@ public function add_Curriculum(Request $request){
 
 
 public function editMaterial($id){
-    
+
     $Material = Material::find($id);
     $page_title = 'formfiletext';
     $page_name = 'editMaterial';
     return view('admin.editMaterial',compact('page_title','page_name','Material'));
 }
 public function edit_curriculum(Request $request,$id){
-    
+
     $objective = $request->objective;
     $level = $request->level;
     $updateDetails = array(
@@ -2819,7 +2811,7 @@ public function edit_curriculum(Request $request,$id){
     DB::table('curriculum')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have Been Saved");
         return Redirect::back();
-    
+
 }
 public function edit_material(Request $request,$id){
     $path = 'uploads/file';
@@ -2830,7 +2822,7 @@ public function edit_material(Request $request,$id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('pdf');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -2929,12 +2921,12 @@ public function add_Questions(Request $request){
     $Question->answer = $answer;
     $Question->quiz_id = $quiz_id;
     $Question->save();
-    
+
     Session::flash('message', "Changes have Been Saved");
     return Redirect::back();
 }
 public function addQuestion($quiz_id){
-   
+
     $page_title = 'formfiletext';
     $page_name = 'Add Question';
     return view('admin.addQuestions',compact('page_title','page_name','quiz_id'));
@@ -2952,16 +2944,16 @@ public function addCert(){
 
 public function add_Cert(Request $request){
     $path = 'uploads/certificates';
-    
+
     $file = $request->file('image');
     $filename = $file->getClientOriginalName();
     $file->move($path, $filename);
     $image = $filename;
-    
-    
+
+
      $Certificate = new Certificate;
      $Certificate->cat = $request->cat;
-     
+
      $Certificate->cert = $image;
      $Certificate->save();
      Session::flash('message', "Certificate Has Been Added");
@@ -2982,7 +2974,7 @@ public function editCert($id){
     $Cert = Certificate::find($id);
     $page_title = 'formfiletext';//For Style Inheritance
     $page_name = 'Edit Site Administrator';
-   
+
     return view('admin.editCert',compact('page_title','Cert','page_name'));
 }
 
@@ -2990,15 +2982,15 @@ public function editCert($id){
 
 public function edit_Cert(Request $request, $id){
     $path = 'uploads/certificates';
-    
+
         if(isset($request->image)){
             $fileSize = $request->file('image')->getClientSize();
             if($fileSize>=1800000){
                Session::flash('message', "File Exceeded the maximum allowed Size");
                Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-               
+
             }else{
-               
+
                 $file = $request->file('image');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -3012,33 +3004,33 @@ public function edit_Cert(Request $request, $id){
         }
         $updateDetails = array(
                 'cat'=>$request->cat,
-                
+
                 'cert'=>$image
         );
         DB::table('certificates')->where('id',$id)->update($updateDetails);
         Session::flash('message', "Your Changes Have Been Saved");
         return Redirect::back();
-  
+
 }
 
 public function deleteCert($id){
-   
+
         DB::table('certificates')->where('id',$id)->delete();
         return Redirect::back();
-    
+
 }
 // Fetch Sessions
 public function checkSessions(){
     $Users = User::all();
     $page_title = 'list';//For Style Inheritance
     $page_name = 'User Sesions';
-   
+
     return view('admin.sessions',compact('page_title','Users','page_name'));
 }
 
 
 public function addLessons(){
-    
+
     $page_title = 'formfiletext';
     $page_name = 'Add Lesson';
     return view('admin.addLesson',compact('page_title','page_name'));
@@ -3046,7 +3038,7 @@ public function addLessons(){
 
 
 public function addTopic(){
-    
+
     $page_title = 'formfiletext';
     $page_name = 'Add Topic';
     return view('admin.addTopic',compact('page_title','page_name'));
@@ -3075,7 +3067,7 @@ public function add_Topic(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('pdf');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3123,7 +3115,7 @@ public function editTopic($id){
     $Topic = Topic::find($id);
     $page_title = 'formfiletext';//For Style Inheritance
     $page_name = 'Edit Site Administrator';
-   
+
     return view('admin.editTopic',compact('page_title','Topic','page_name'));
 }
 
@@ -3131,7 +3123,7 @@ public function editLesson($id){
     $Lesson = Lesson::find($id);
     $page_title = 'formfiletext';//For Style Inheritance
     $page_name = 'Edit Lesson';
-   
+
     return view('admin.editLesson',compact('page_title','Lesson','page_name'));
 }
 
@@ -3144,7 +3136,7 @@ public function edit_topic(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('pdf');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3183,7 +3175,7 @@ public function edit_lesson(Request $request, $id){
         'course_id' => $course_id,
         'title' => $request->title,
         'content' => $objective,
-       
+
     );
 
     DB::table('lessons')->where('id',$id)->update($updateDetails);
@@ -3237,7 +3229,7 @@ public function swapOrder($id){
     );
     DB::table('orders')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
 
 public function edit_Orders(Request $request, $id){
@@ -3247,8 +3239,8 @@ public function edit_Orders(Request $request, $id){
         'content' => $request->content,
         'status' => $request->status,
         'title' => $request->title,
-        
-       
+
+
     );
     DB::table('orders')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -3269,7 +3261,7 @@ public function add_Order(Request $request){
 
 public function order_explore($id){
     $Order = DB::table('orders')->where('id',$id)->get();
-    
+
     $page_name = 'Orders';
     $page_title = 'Admin Home';
     return view('admin.order',compact('page_title','Order','page_name'));
@@ -3278,7 +3270,7 @@ public function order_explore($id){
 // Event Controls
 
 public function addEvent(){
-    
+
     $page_title = 'formfiletext';//For Layout Inheritance
     $page_name = 'add Event';
     return view('admin.addEvent',compact('page_title','page_name'));
@@ -3297,7 +3289,7 @@ public function swapevent($id){
         'status' => $new_status,
     );
     DB::table('events')->where('id',$id)->update($updateDetails);
-    
+
    return Redirect::back();
 }
 
@@ -3309,18 +3301,18 @@ public function add_Event(Request $request){
     $start = $request->start;
     $stop = $request->stop;
     $date = $request->date;
-  
+
     $author = Auth::user()->name;
     $category = $request->cat;
     $path = 'uploads/events';
-    if(isset($request->image_one)){ 
+    if(isset($request->image_one)){
         $fileSize = $request->file('image_one')->getClientSize();
             if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3333,10 +3325,10 @@ public function add_Event(Request $request){
         $image_one = $request->pro_img_cheat;
     }
 
- 
-    
 
-    $Event = new Event; 
+
+
+    $Event = new Event;
     $Event->title = $title;
     $Event->start = $request->start;
     $Event->stop = $request->stop;
@@ -3345,12 +3337,12 @@ public function add_Event(Request $request){
     $Event->location = $request->venue;
     $Event->author = $author;
     $Event->image = $image_one;
-   
+
     $Event->save();
     Session::flash('message', "Changes Saved Successfully");
     return Redirect::back();
 
-    
+
 }
 
 public function events(){
@@ -3377,7 +3369,7 @@ public function edit_Event(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3399,10 +3391,10 @@ public function edit_Event(Request $request, $id){
         'venue' => $request->venue,
         'start' => $request->start,
         'stop' => $request->stop,
-       
+
         'date' => $request->date,
         'image' =>$image_one,
-      
+
     );
     DB::table('events')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -3411,7 +3403,7 @@ public function edit_Event(Request $request, $id){
 
 public function delete_Event($id){
     DB::table('events')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 
@@ -3427,8 +3419,8 @@ public function add_Destination(Request $request){
 
     $path = 'uploads/destinations';
     if(isset($request->image_one)){
-       
-            
+
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3436,14 +3428,14 @@ public function add_Destination(Request $request){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_one = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_one);
-            
+
     }else{
         $image_one = $request->pro_img_cheat;
     }
 
     if(isset($request->image_two)){
-      
-            
+
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3451,15 +3443,15 @@ public function add_Destination(Request $request){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_two = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_two);
-         
+
     }else{
         $image_two = $request->pro_img_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
-       
-           
+
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3467,14 +3459,14 @@ public function add_Destination(Request $request){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_three = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_three);
-        
+
     }else{
         $image_three = $request->pro_img_cheat;
     }
 
     if(isset($request->image_four)){
-      
-           
+
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3482,12 +3474,12 @@ public function add_Destination(Request $request){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_four = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_four);
-        
+
     }else{
         $image_four = $request->pro_img_cheat;
     }
     //Additional images
-    
+
 
     $Destination = new Destination;
     $Destination->slung = Str::slug($request->title);
@@ -3498,14 +3490,14 @@ public function add_Destination(Request $request){
     // $Destination->coordinates = $request->coordinates;
     $Destination->country = $request->country;
     $Destination->meta  = $request->meta;
-    
+
     $Destination->image_one = $image_one;
     $Destination->image_two = $image_two;
     $Destination->image_three = $image_three;
     $Destination->image_four = $image_four;
- 
+
     $Destination->save();
-    
+
     Session::flash('message', "You have Added One New Product");
     return Redirect::back();
 }
@@ -3529,8 +3521,8 @@ public function editDestination($id){
 public function edit_Destination(Request $request, $id){
     $path = 'uploads/destinations';
     if(isset($request->image_one)){
-     
-            
+
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3538,14 +3530,14 @@ public function edit_Destination(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_one = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_one);
-            
+
     }else{
         $image_one = $request->image_one_cheat;
     }
 
     if(isset($request->image_two)){
-       
-            
+
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3553,15 +3545,15 @@ public function edit_Destination(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_two = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_two);
-         
+
     }else{
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
-        
-           
+
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3569,14 +3561,14 @@ public function edit_Destination(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_three = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_three);
-        
+
     }else{
         $image_three = $request->image_three_cheat;
     }
 
     if(isset($request->image_four)){
-       
-           
+
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3584,7 +3576,7 @@ public function edit_Destination(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_four = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_four);
-        
+
     }else{
         $image_four = $request->image_four_cheat;
     }
@@ -3598,13 +3590,13 @@ public function edit_Destination(Request $request, $id){
         'price' => $request->price,
         'video' => $request->video,
         'guide' => $request->guide,
-        'meta' => $request->meta, 
+        'meta' => $request->meta,
         'image_one' => $image_one,
         'image_two' => $image_two,
         'image_three' => $image_three,
         'image_four' => $image_four,
-        
- 
+
+
     );
     DB::table('destinations')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -3612,7 +3604,7 @@ public function edit_Destination(Request $request, $id){
 }
 
 public function deleteDestination($id){
-    
+
     DB::table('destinations')->where('id',$id)->delete();
     DB::table('itineries')->where('product_id',$id)->delete();
     return Redirect::back();
@@ -3629,7 +3621,7 @@ public function swapDestination($id){
     );
     DB::table('destinations')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
 
 
@@ -3646,9 +3638,9 @@ public function swapSlider($id){
     );
     DB::table('destinations')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
- 
+
 
 //  Experience
 public function addExperience(){
@@ -3667,7 +3659,7 @@ public function add_Experience(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3685,9 +3677,9 @@ public function add_Experience(Request $request){
          if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3700,15 +3692,15 @@ public function add_Experience(Request $request){
         $image_two = $request->pro_img_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3726,9 +3718,9 @@ public function add_Experience(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3747,9 +3739,9 @@ public function add_Experience(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_six');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3767,9 +3759,9 @@ public function add_Experience(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_five');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3813,8 +3805,8 @@ public function add_Experience(Request $request){
     $Experience->cat = $request->cat;
     $Experience->meta  = $request->meta;
     $Experience->destination  = $request->town;
-    
-    
+
+
     $Experience->image_one = $image_one;
     $Experience->image_two = $image_two;
     $Experience->image_three = $image_three;
@@ -3822,7 +3814,7 @@ public function add_Experience(Request $request){
     $Experience->image_five = $image_five;
     $Experience->image_six = $image_six;
     $Experience->save();
-    
+
     Session::flash('message', "You have Added One New Product");
     return Redirect::back();
 }
@@ -3846,8 +3838,8 @@ public function editExperience($id){
 public function edit_Experience(Request $request, $id){
     $path = 'uploads/experiences';
     if(isset($request->image_one)){
-    
-            
+
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3855,7 +3847,7 @@ public function edit_Experience(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_one = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_one);
-            
+
     }else{
         $image_one = $request->image_one_cheat;
     }
@@ -3865,9 +3857,9 @@ public function edit_Experience(Request $request, $id){
          if($fileSize>=1800000){
             Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3880,15 +3872,15 @@ public function edit_Experience(Request $request, $id){
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3906,9 +3898,9 @@ public function edit_Experience(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3926,9 +3918,9 @@ public function edit_Experience(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_five');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3946,9 +3938,9 @@ public function edit_Experience(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_six');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -3977,8 +3969,8 @@ public function edit_Experience(Request $request, $id){
     $Fuel->save();
     }
 
-    
-  
+
+
     $updateDetails = array(
         'title' => $request->title,
         'slung' => Str::slug($request->title),
@@ -3990,7 +3982,7 @@ public function edit_Experience(Request $request, $id){
         'guide' => $request->guide,
         'cat' => $request->cat,
         'meta' => $request->meta,
-        'destination' => $request->town, 
+        'destination' => $request->town,
         'country'=>$request->country,
         'image_one' => $image_one,
         'image_two' => $image_two,
@@ -3998,8 +3990,8 @@ public function edit_Experience(Request $request, $id){
         'image_four' => $image_four,
         'image_five' => $image_five,
         'image_six' => $image_six,
-        
- 
+
+
     );
     DB::table('experiences')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -4011,17 +4003,17 @@ public function edit_Experiences(){
     foreach($Experience as $Experiences)
     {
         $title = $Experiences->name;
-    
+
         $updateDetails = array(
             'slung' =>  Str::slug($title)
         );
         DB::table('hotels')->where('id',$Experiences->id)->update($updateDetails);
     }
     echo "Done";
-   
+
 }
 public function deleteExperience($id){
-    
+
     DB::table('experiences')->where('id',$id)->delete();
     DB::table('itineries')->where('product_id',$id)->delete();
     return Redirect::back();
@@ -4038,7 +4030,7 @@ public function swapExperience($id){
     );
     DB::table('experiences')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
 
  public function swapBeach($id){
@@ -4053,9 +4045,9 @@ public function swapExperience($id){
     );
     DB::table('experiences')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
- 
+
 
  public function addHotel(){
     $page_title = 'formfiletext';//For Layout Inheritance
@@ -4073,7 +4065,7 @@ public function add_Hotel(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4091,9 +4083,9 @@ public function add_Hotel(Request $request){
          if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4106,15 +4098,15 @@ public function add_Hotel(Request $request){
         $image_two = $request->pro_img_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4132,9 +4124,9 @@ public function add_Hotel(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4153,9 +4145,9 @@ public function add_Hotel(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_six');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4173,9 +4165,9 @@ public function add_Hotel(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_five');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4188,7 +4180,7 @@ public function add_Hotel(Request $request){
         $image_five = $request->pro_img_cheat;
     }
     //Additional images
-    
+
 
     $Hotel = new Hotel;
     $Hotel->name = $request->name;
@@ -4201,9 +4193,9 @@ public function add_Hotel(Request $request){
     $Hotel->image_four = $image_four;
     $Hotel->image_five = $image_five;
     $Hotel->image_six = $image_six;
- 
+
     $Hotel->save();
-    
+
     Session::flash('message', "You have Added One New Product");
     return Redirect::back();
 }
@@ -4233,7 +4225,7 @@ public function edit_Hotel(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4251,9 +4243,9 @@ public function edit_Hotel(Request $request, $id){
          if($fileSize>=1800000){
             Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4266,15 +4258,15 @@ public function edit_Hotel(Request $request, $id){
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4292,9 +4284,9 @@ public function edit_Hotel(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4313,9 +4305,9 @@ public function edit_Hotel(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_five');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4333,9 +4325,9 @@ public function edit_Hotel(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_six');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4347,20 +4339,20 @@ public function edit_Hotel(Request $request, $id){
     }else{
         $image_six = $request->image_six_cheat;
     }
-  
+
     $updateDetails = array(
         'name' => $request->name,
         'location' => $request->location,
         'content' => $request->content,
-        'meta' => $request->meta, 
+        'meta' => $request->meta,
         'image_one' => $image_one,
         'image_two' => $image_two,
         'image_three' => $image_three,
         'image_four' => $image_four,
         'image_five' => $image_five,
         'image_six' => $image_six,
-        
- 
+
+
     );
     DB::table('hotels')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -4368,7 +4360,7 @@ public function edit_Hotel(Request $request, $id){
 }
 
 public function deleteHotel($id){
-    
+
     DB::table('hotels')->where('id',$id)->delete();
     return Redirect::back();
 }
@@ -4384,7 +4376,7 @@ public function swapHotel($id){
     );
     DB::table('hotels')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
 
  public function addRoom(){
@@ -4403,7 +4395,7 @@ public function add_Room(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4421,9 +4413,9 @@ public function add_Room(Request $request){
          if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4436,15 +4428,15 @@ public function add_Room(Request $request){
         $image_two = $request->pro_img_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4462,9 +4454,9 @@ public function add_Room(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4477,7 +4469,7 @@ public function add_Room(Request $request){
         $image_four = $request->pro_img_cheat;
     }
     //Additional images
-    
+
 
     $Room = new Room;
     $Room->name = $request->name;
@@ -4488,9 +4480,9 @@ public function add_Room(Request $request){
     $Room->image_two = $image_two;
     $Room->image_three = $image_three;
     $Room->image_four = $image_four;
- 
+
     $Room->save();
-    
+
     Session::flash('message', "You have Added One New Product");
     return Redirect::back();
 }
@@ -4527,7 +4519,7 @@ public function edit_Room(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4545,9 +4537,9 @@ public function edit_Room(Request $request, $id){
          if($fileSize>=1800000){
             Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4560,15 +4552,15 @@ public function edit_Room(Request $request, $id){
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4586,9 +4578,9 @@ public function edit_Room(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4600,18 +4592,18 @@ public function edit_Room(Request $request, $id){
     }else{
         $image_four = $request->image_four_cheat;
     }
-  
+
     $updateDetails = array(
         'name' => $request->name,
-        
+
         'content' => $request->content,
-        'price' => $request->price, 
+        'price' => $request->price,
         'image_one' => $image_one,
         'image_two' => $image_two,
         'image_three' => $image_three,
         'image_four' => $image_four,
-        
- 
+
+
     );
     DB::table('rooms')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -4619,7 +4611,7 @@ public function edit_Room(Request $request, $id){
 }
 
 public function deleteRoom($id){
-    
+
     DB::table('rooms')->where('id',$id)->delete();
     return Redirect::back();
 }
@@ -4635,7 +4627,7 @@ public function swapRoom($id){
     );
     DB::table('rooms')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
 
 //  Guide
@@ -4655,7 +4647,7 @@ public function add_Guide(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4668,8 +4660,8 @@ public function add_Guide(Request $request){
         $image_one = $request->pro_img_cheat;
     }
 
-    
-    
+
+
 
     $Guide = new Guide;
     $Guide->name = $request->name;
@@ -4677,10 +4669,10 @@ public function add_Guide(Request $request){
     $Guide->mobile = $request->mobile;
     $Guide->content = $request->content;
     $Guide->image_one = $image_one;
-    
- 
+
+
     $Guide->save();
-    
+
     Session::flash('message', "You have Added One New Product");
     return Redirect::back();
 }
@@ -4717,7 +4709,7 @@ public function edit_Guide(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4730,17 +4722,17 @@ public function edit_Guide(Request $request, $id){
         $image_one = $request->image_one_cheat;
     }
 
-   
-  
+
+
     $updateDetails = array(
         'name' => $request->name,
         'email' => $request->email,
-        'mobile' => $request->mobile, 
-        'content' => $request->content, 
+        'mobile' => $request->mobile,
+        'content' => $request->content,
         'image_one' => $image_one,
-        
-        
- 
+
+
+
     );
     DB::table('guides')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -4748,8 +4740,8 @@ public function edit_Guide(Request $request, $id){
 }
 
 public function deleteGuide($id){
-    
-    DB::table('guides')->where('id',$id)->delete(); 
+
+    DB::table('guides')->where('id',$id)->delete();
     return Redirect::back();
 }
 // Itineries
@@ -4772,14 +4764,14 @@ public function add_Itinery(Request $request){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_one = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_one);
-            
+
     }else{
         $image_one = $request->pro_img_cheat;
     }
 
     if(isset($request->image_two)){
-      
-            
+
+
         $file = $request->file('image_two');
         $filename = str_replace(' ', '', $file->getClientOriginalName());
         $timestamp = new Datetime();
@@ -4792,7 +4784,7 @@ else{
     $image_two = $request->pro_img_cheat;
 }
 
-    
+
 
     $Itinery = new Itinery;
     $Itinery->content = $request->content;
@@ -4801,10 +4793,10 @@ else{
     $Itinery->day = $request->day;
     $Itinery->image_one = $image_one;
     $Itinery->image_two = $image_two;
- 
- 
+
+
     $Itinery->save();
-    
+
     Session::flash('message', "You have Added One New Product");
     return Redirect::back();
 }
@@ -4833,7 +4825,7 @@ public function editItinery($id){
 public function edit_Itinery(Request $request, $id){
     $path = 'uploads/itineries';
     if(isset($request->image_one)){
-        
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4841,13 +4833,13 @@ public function edit_Itinery(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_one = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_one);
-            
+
     }else{
         $image_one = $request->image_one_cheat;
     }
 
     if(isset($request->image_two)){
-        
+
         $file = $request->file('image_two');
         $filename = str_replace(' ', '', $file->getClientOriginalName());
         $timestamp = new Datetime();
@@ -4855,13 +4847,13 @@ public function edit_Itinery(Request $request, $id){
         $image_main_temp = $new_timestamp.'image'.$filename;
         $image_two = str_replace(' ', '',$image_main_temp);
         $file->move($path, $image_two);
-        
+
     }else{
         $image_two = $request->image_two_cheat;
     }
 
-   
-  
+
+
     $updateDetails = array(
         'day' => $request->day,
         'type' => $request->type,
@@ -4869,9 +4861,9 @@ public function edit_Itinery(Request $request, $id){
         'content' => $request->content,
         'image_one' => $image_one,
         'image_two' => $image_two,
-    
-        
- 
+
+
+
     );
     DB::table('itineries')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -4879,8 +4871,8 @@ public function edit_Itinery(Request $request, $id){
 }
 
 public function deleteItinery($id){
-    
-    
+
+
     DB::table('itineries')->where('id',$id)->delete();
     return Redirect::back();
 }
@@ -4914,12 +4906,12 @@ public function swapBooking($id){
     );
     DB::table('bookings')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
 
  public function deleteBooking($id){
-    
-    
+
+
     DB::table('bookings')->where('id',$id)->delete();
     return Redirect::back();
 }
@@ -4941,7 +4933,7 @@ public function add_Car(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4959,9 +4951,9 @@ public function add_Car(Request $request){
          if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -4974,15 +4966,15 @@ public function add_Car(Request $request){
         $image_two = $request->pro_img_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5000,9 +4992,9 @@ public function add_Car(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5020,9 +5012,9 @@ public function add_Car(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_six');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5040,9 +5032,9 @@ public function add_Car(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_five');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5055,7 +5047,7 @@ public function add_Car(Request $request){
         $image_five = $request->pro_img_cheat;
     }
     //Additional images
-    
+
     $CheckModel = DB::table('models')->where('name',$request->model)->get();
     if(count($CheckModel) == 0){
     // Add Model
@@ -5090,23 +5082,23 @@ public function add_Car(Request $request){
     $Car->music = $request->music;
     $Car->content = $request->content;
     $Car->category = $request->cartype;
-    
+
     $Car->image_one = $image_one;
     $Car->image_two = $image_two;
     $Car->image_three = $image_three;
     $Car->image_four = $image_four;
     $Car->image_five = $image_five;
     $Car->image_six = $image_six;
- 
+
     $Car->save();
-    
+
     Session::flash('message', "You have Added One New Car");
     return Redirect::back();
 }
 
 
 public function cars(){
-    $Car = Car::all();
+    $Car = \App\Models\Car::all();
     $page_title = 'list';
     $page_name = 'All Cars';
     return view('admin.cars',compact('page_title','Car','page_name'));
@@ -5129,7 +5121,7 @@ public function edit_Car(Request $request, $id){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5147,9 +5139,9 @@ public function edit_Car(Request $request, $id){
          if($fileSize>=1800000){
             Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5162,15 +5154,15 @@ public function edit_Car(Request $request, $id){
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5188,9 +5180,9 @@ public function edit_Car(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5208,9 +5200,9 @@ public function edit_Car(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_five');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5228,9 +5220,9 @@ public function edit_Car(Request $request, $id){
         if($fileSize>=1800000){
            Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_six');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5258,9 +5250,9 @@ public function edit_Car(Request $request, $id){
     $Fuel->name = $request->fuel;
     $Fuel->save();
     }
-  
+
     $updateDetails = array(
-           
+
             'name' => $request->name,
             'price' => $request->price,
             'model' => $request->model,
@@ -5278,15 +5270,15 @@ public function edit_Car(Request $request, $id){
             'music' => $request->music,
             'category' => $request->cartype,
             'content' => $request->content,
-            
+
             'image_one' => $image_one,
             'image_two' => $image_two,
             'image_three' => $image_three,
             'image_four' => $image_four,
             'image_five' => $image_five,
             'image_six' => $image_six,
-     
- 
+
+
     );
     DB::table('cars')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -5294,7 +5286,7 @@ public function edit_Car(Request $request, $id){
 }
 
 public function deleteCar($id){
-    
+
     DB::table('cars')->where('id',$id)->delete();
     DB::table('itineries')->where('product_id',$id)->delete();
     return Redirect::back();
@@ -5311,12 +5303,12 @@ public function swapCar($id){
     );
     DB::table('cars')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
 
 
 public function deleteImage($id,$image,$table){
-    
+
     $updateDetails = array(
         $image=>NULL,
     );
@@ -5357,7 +5349,7 @@ public function edit_CarType(Request $request, $id){
         'luggage'=>$request->luggage,
         // 'description'=>$request->content,
         'image'=>$image
-      
+
     );
     DB::table('cartypes')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -5373,26 +5365,26 @@ public function transfers(){
 }
 
 public function addTransfer(){
-    
+
     // $Transfer = Transfer::find($id);
     $page_title = 'formfiletext';//For Style Inheritance
     $page_name = 'Add Transfers';
-   
+
     return view('admin.addTransfer',compact('page_title','page_name'));
 }
 
 // Add_Transfers
 public function add_Transfer(Request $request){
     $path = 'uploads/transfers';
-    
+
         if(isset($request->image)){
             $fileSize = $request->file('image')->getClientSize();
             if($fileSize>=1800000){
                Session::flash('message', "File Exceeded the maximum allowed Size");
                Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-               
+
             }else{
-               
+
                 $file = $request->file('image');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -5404,7 +5396,7 @@ public function add_Transfer(Request $request){
         }else{
             $image = "0";
         }
- 
+
                 $Transfers = new Transfer;
                 $Transfers->from = $request->from;
                 $Transfers->to = $request->to;
@@ -5417,33 +5409,33 @@ public function add_Transfer(Request $request){
                 $Transfers->price = $request->price;
                 $Transfers->image = $image;
                 $Transfers->save();
-        
-       
+
+
         Session::flash('message', "Your Changes Have Been Saved");
         return Redirect::back();
-    
+
 }
 
 public function editTransfer($id){
-    
+
     $Transfer = Transfer::find($id);
     $page_title = 'formfiletext';//For Style Inheritance
     $page_name = 'Edit Transfers';
-   
+
     return view('admin.editTransfer',compact('page_title','Transfer','page_name'));
 }
 
 public function edit_Transfer(Request $request, $id){
     $path = 'uploads/transfers';
-    
+
         if(isset($request->image)){
             $fileSize = $request->file('image')->getClientSize();
             if($fileSize>=1800000){
                Session::flash('message', "File Exceeded the maximum allowed Size");
                Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-               
+
             }else{
-               
+
                 $file = $request->file('image');
                 $filename = str_replace(' ', '', $file->getClientOriginalName());
                 $timestamp = new Datetime();
@@ -5465,25 +5457,25 @@ public function edit_Transfer(Request $request, $id){
             'mode'=>$request->mode,
             'capacity'=>$request->capacity,
             'price'=>$request->price,
-            
+
             'image'=>$image
         );
         DB::table('transfers')->where('id',$id)->update($updateDetails);
         Session::flash('message', "Your Changes Have Been Saved");
         return Redirect::back();
-    
+
 }
 
 
 
 public function deleteTransfer($id){
-  
+
         DB::table('transfers')->where('id',$id)->delete();
         return Redirect::back();
-    
+
 }
 
-// 
+//
 public function countries(){
     $Country = Country::all();
     $page_title = 'list';
@@ -5502,7 +5494,7 @@ public function editCountries($id){
 public function edit_Countries(Request $request, $id){
     $path = 'uploads/countries';
     if(isset($request->image)){
-            
+
             $file = $request->file('image');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5510,7 +5502,7 @@ public function edit_Countries(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image);
-            
+
     }else{
         $image = $request->image_cheat;
     }
@@ -5523,13 +5515,13 @@ public function edit_Countries(Request $request, $id){
         $image_main_temp = $new_timestamp.'banner'.$filename;
         $banner = str_replace(' ', '',$image_main_temp);
         $file->move($path, $banner);
-            
+
     }else{
         $banner = $request->banner_cheat;
     }
 
 
-   
+
 
     $updateDetails = array(
         'title' => $request->title,
@@ -5538,7 +5530,7 @@ public function edit_Countries(Request $request, $id){
         'content' => $request->content,
         'image' =>$image,
         'banner' =>$banner,
-        
+
     );
     DB::table('countries')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -5547,7 +5539,7 @@ public function edit_Countries(Request $request, $id){
 
 public function deleteCountries($id){
     DB::table('countries')->where('id',$id)->delete();
-   
+
     return Redirect::back();
 }
 
@@ -5567,7 +5559,7 @@ public function add_Sample(Request $request){
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
             return Redirect::back();
             }else{
-            
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5585,9 +5577,9 @@ public function add_Sample(Request $request){
          if($fileSize>=1800000){
             Session::flash('message', "File Exceeded the maximum allowed Size");
             Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-            
+
          }else{
-            
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5600,15 +5592,15 @@ public function add_Sample(Request $request){
         $image_two = $request->pro_img_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
         $fileSize = $request->file('image_three')->getClientSize();
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5626,9 +5618,9 @@ public function add_Sample(Request $request){
         if($fileSize>=1800000){
            Session::flash('message', "File Exceeded the maximum allowed Size");
            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-           
+
         }else{
-           
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5641,7 +5633,7 @@ public function add_Sample(Request $request){
         $image_four = $request->pro_img_cheat;
     }
     //Additional images
-    
+
 
     $Sample = new Sample;
     $Sample->title = $request->title;
@@ -5652,14 +5644,14 @@ public function add_Sample(Request $request){
     // $Sample->coordinates = $request->coordinates;
     $Sample->guide = $request->guide;
     $Sample->meta  = $request->meta;
-    
+
     $Sample->image_one = $image_one;
     $Sample->image_two = $image_two;
     $Sample->image_three = $image_three;
     $Sample->image_four = $image_four;
- 
+
     $Sample->save();
-    
+
     Session::flash('message', "You have Added One New Product");
     return Redirect::back();
 }
@@ -5683,8 +5675,8 @@ public function editSample($id){
 public function edit_Sample(Request $request, $id){
     $path = 'uploads/samples';
     if(isset($request->image_one)){
-       
-            
+
+
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5692,14 +5684,14 @@ public function edit_Sample(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_one = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_one);
-            
+
     }else{
         $image_one = $request->image_one_cheat;
     }
 
     if(isset($request->image_two)){
-        
-            
+
+
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5707,14 +5699,14 @@ public function edit_Sample(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_two = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_two);
-         
+
     }else{
         $image_two = $request->image_two_cheat;
     }
 
-    
+
     if(isset($request->image_three)){
-        
+
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5722,14 +5714,14 @@ public function edit_Sample(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_three = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_three);
-        
+
     }else{
         $image_three = $request->image_three_cheat;
     }
 
     if(isset($request->image_four)){
-       
-           
+
+
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5737,11 +5729,11 @@ public function edit_Sample(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_four = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_four);
-        
+
     }else{
         $image_four = $request->image_four_cheat;
     }
-  
+
 
     $updateDetails = array(
         'title' => $request->title,
@@ -5752,13 +5744,13 @@ public function edit_Sample(Request $request, $id){
         'price' => $request->price,
         'video' => $request->video,
         'guide' => $request->guide,
-        'meta' => $request->meta, 
+        'meta' => $request->meta,
         'image_one' => $image_one,
         'image_two' => $image_two,
         'image_three' => $image_three,
         'image_four' => $image_four,
-        
- 
+
+
     );
     DB::table('samples')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -5766,7 +5758,7 @@ public function edit_Sample(Request $request, $id){
 }
 
 public function deleteSample($id){
-    
+
     DB::table('samples')->where('id',$id)->delete();
     DB::table('itineries')->where('product_id',$id)->delete();
     return Redirect::back();
@@ -5784,10 +5776,10 @@ public function swapSample($id){
     );
     DB::table('samples')->where('id',$id)->update($updateDetails);
     return Redirect::back();
-   
+
  }
 
-//  
+//
 
 public function addExtra(){
     $page_title = 'formfiletext';//For Layout Inheritance
@@ -5798,9 +5790,9 @@ public function addExtra(){
 public function add_Extra(Request $request){
 
     $path = 'uploads/extras';
-   
+
     if(isset($request->image)){
-       
+
         $file = $request->file('image');
         $filename = str_replace(' ', '', $file->getClientOriginalName());
         $timestamp = new Datetime();
@@ -5808,12 +5800,12 @@ public function add_Extra(Request $request){
         $image_main_temp = $new_timestamp.'image'.$filename;
         $image = str_replace(' ', '',$image_main_temp);
         $file->move($path, $image);
-    
+
     }else{
         $image = "0";
     }
 
-    if(isset($request->image_one)){           
+    if(isset($request->image_one)){
         $file = $request->file('image_one');
         $filename = str_replace(' ', '', $file->getClientOriginalName());
         $timestamp = new Datetime();
@@ -5821,12 +5813,12 @@ public function add_Extra(Request $request){
         $image_main_temp = $new_timestamp.'image'.$filename;
         $image_one = str_replace(' ', '',$image_main_temp);
         $file->move($path, $image_one);
-        
+
     }else{
         $image_one = $request->image_one_cheat;
     }
         //Additional images
-    
+
 
     $Extra = new Extra;
     $Extra->title = $request->title;
@@ -5837,7 +5829,7 @@ public function add_Extra(Request $request){
     $Extra->image = $image;
     $Extra->image_one = $image_one;
     $Extra->save();
-    
+
     Session::flash('message', "You have Added One New Product");
     return Redirect::back();
 }
@@ -5861,7 +5853,7 @@ public function editExtra($id){
 public function edit_Extra(Request $request, $id){
     $path = 'uploads/extras';
     if(isset($request->image)){
-       
+
         $file = $request->file('image');
         $filename = str_replace(' ', '', $file->getClientOriginalName());
         $timestamp = new Datetime();
@@ -5869,12 +5861,12 @@ public function edit_Extra(Request $request, $id){
         $image_main_temp = $new_timestamp.'image'.$filename;
         $image = str_replace(' ', '',$image_main_temp);
         $file->move($path, $image);
-    
+
     }else{
         $image = $request->image_cheat;
     }
 
-    if(isset($request->image_one)){           
+    if(isset($request->image_one)){
             $file = $request->file('image_one');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $timestamp = new Datetime();
@@ -5882,7 +5874,7 @@ public function edit_Extra(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_one = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_one);
-            
+
     }else{
         $image_one = $request->image_one_cheat;
     }
@@ -5892,9 +5884,9 @@ public function edit_Extra(Request $request, $id){
         'product_id' =>$request->product_id,
         'slung' => Str::slug($request->title),
         'content' => $request->content,
-        'image_one' => $image_one,      
-        'image' => $image,      
- 
+        'image_one' => $image_one,
+        'image' => $image,
+
     );
     DB::table('extras')->where('id',$id)->update($updateDetails);
     Session::flash('message', "Changes have been saved");
@@ -5902,7 +5894,7 @@ public function edit_Extra(Request $request, $id){
 }
 
 public function deleteExtra($id){
-    
+
     DB::table('extra')->where('id',$id)->delete();
     return Redirect::back();
 }
