@@ -109,14 +109,8 @@
 
                                         </ul>
                                     </li>
+                                    <li class="menu-item"><a href="{{url('/')}}/destinations">Destinations</a>
 
-                                    <li class="menu-item has-children"><a href="#">Explore Countries</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Zanzibar</a></li>
-                                            <li><a href="#">Tanzania</a></li>
-                                            <li><a href="#">Rwanda</a></li>
-                                            <li><a href="#">Uganda</a></li>
-                                        </ul>
                                     </li>
 
 
