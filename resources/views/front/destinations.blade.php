@@ -23,7 +23,7 @@
     <section class="destination-section pb-100">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                {{-- <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="single-place-item-two mb-30 wow fadeInUp">
                         <div class="place-img">
                             <img src="{{asset('theme/assets/images/place/place-10.jpg')}}" alt="Place Image">
@@ -50,21 +50,29 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+                @foreach ($Experience as $experience)
                 <div class="col-lg-6 col-md-12">
                     <div class="single-place-item-two mb-30 wow fadeInUp">
                         <div class="place-img">
-                            <img src="{{asset('theme/assets/images/place/place-12.jpg')}}" alt="Place Image">
-                            <span class="tour-count">5 Tours</span>
+                            <img style="max-height:350px" src="{{url('/')}}/uploads/experiences/{{$experience->image_one}}" alt="Place Image">
+                            <span class="tour-count">{{$experience->duration}} Day Trip</span>
                             <div class="place-content">
                                 <div class="info text-white">
-                                    <h3 class="title mb-10">Thailand</h3>
-                                    <p class="price"><span class="currency">$</span>225.63</p>
+                                    <h3 class="title mb-10">{{$experience->title}}</h3>
+                                    <p class="price"><span class="currency"></span>{{$experience->location}}</p>
+                                    <br>
+                                    <strong>
+                                        <a style="border:2px solid #ffffff; color:#ffffff" class="main-btn btn" href="{{url('/')}}/destinations/itinerary/{{$experience->slung}}">View Itinerary <i class="fas fa-paper-plane"></i></a>
+                                    </strong>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
+                @endforeach
+
                 <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                     <div class="single-place-item-two mb-30">
                         <div class="place-img">

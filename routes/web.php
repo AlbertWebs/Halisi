@@ -31,7 +31,8 @@ Route::get('/plan-my-trip', function () {
 });
 
 Route::get('/destinations', function () {
-    return view('front.destinations');
+    $Experience = App\Models\Experience::all();
+    return view('front.destinations',compact('Experience'));
 });
 
 Route::get('/shop', function () {
