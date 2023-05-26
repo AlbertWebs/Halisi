@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
