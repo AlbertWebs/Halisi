@@ -49,7 +49,7 @@ Route::get('/clear-cache', function() {
 });
 // Clear Cache
 
-Auth::routes();
+// Auth::routes();
 
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
