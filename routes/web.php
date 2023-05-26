@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,7 @@ Route::get('/plan-my-trip', function () {
 });
 
 Route::get('/destinations', function () {
-    $Experience = App\Models\Experience::all();
+    $Experience = DB::table('experiences')->get();
     return view('front.destinations',compact('Experience'));
 });
 
