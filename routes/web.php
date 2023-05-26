@@ -39,6 +39,15 @@ Route::get('/shop', function () {
     return view('front.shop');
 });
 
+// Clear Cache
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode2 = Artisan::call('config:clear');
+    $exitCode3 = Artisan::call('route:cache');
+    // return what you want
+    echo "Done";
+});
+// Clear Cache
 
 Auth::routes();
 
