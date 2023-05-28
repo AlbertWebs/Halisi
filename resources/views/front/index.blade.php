@@ -93,7 +93,7 @@
                                 Halisi Africa Discoveries is a premier tour planning company that combines a passion for women empowerment and environmental sustainability. We are committed to creating unique and memorable travel experiences while promoting social and ecological responsibility. Our company is dedicated to empowering women and protecting the environment through sustainable practices.
                             </p>
                             <p class="mb-30">
-                                We at Halisi Africa Discoveries are dedicated to making a difference in society. We actively work with neighborhood groups and NGOs to support initiatives for community development, environmental preservation, and women's empowerment. In order to have a long-lasting impact on the communities we work with, a portion of our profits are invested in these initiatives.
+                                We at Halisi Africa Discoveries are dedicated to making a difference in society. We actively work with local groups and CBOs and NGOs to support initiatives for community development, environmental preservation, and women's empowerment. In order to have a long-lasting impact on the communities we work with, a portion of our profits are invested in these initiatives.
                             </p>
 
 

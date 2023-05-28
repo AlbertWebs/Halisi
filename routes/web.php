@@ -36,6 +36,9 @@ Route::get('/destinations', function () {
     return view('front.destinations',compact('Experience'));
 });
 
+
+Route::get('/destinations/itinerary/{slung}', [App\Http\Controllers\HomeController::class,  'itinerary']);
+
 Route::get('/shop', function () {
     return view('front.shop');
 });
