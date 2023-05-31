@@ -76,12 +76,17 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                     <div class="single-place-item-two mb-30">
                         <div class="place-img">
-                            <img src="{{asset('theme/assets/images/place/place-13.jpg')}}" alt="Place Image">
-                            <span class="tour-count">5 Tours</span>
+                            <img src="{{url('/')}}/uploads/experiences/pexels-asad-photo-maldives-1024984.jpg" alt="Place Image">
+                            <span class="tour-count">Plan Trip Now</span>
                             <div class="place-content">
                                 <div class="info text-white">
-                                    <h3 class="title mb-10">Nepal</h3>
-                                    <p class="price"><span class="currency">$</span>225.63</p>
+                                    {{-- <h3 class="title mb-10">Dubai</h3> --}}
+                                    <h3 class="title mb-10">Honeymoon Safaris</h3>
+                                    {{-- <p class="price"><span class="currency">$</span>225.63</p> --}}
+                                    <br>
+                                    <strong>
+                                        <a style="border:2px solid #ffffff; color:#ffffff" class="main-btn btn" href="{{url('/')}}/plan-my-trip">Plan My Trip <i class="fas fa-paper-plane"></i></a>
+                                    </strong>
                                 </div>
                             </div>
                         </div>
@@ -90,12 +95,17 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                     <div class="single-place-item-two mb-30">
                         <div class="place-img">
-                            <img src="{{asset('theme/assets/images/place/place-14.jpg')}}" alt="Place Image">
-                            <span class="tour-count">5 Tours</span>
+                            <img src="{{url('/')}}/uploads/experiences/pexels-shukhrat-umarov-1534411.jpg" alt="Place Image">
+                            <span class="tour-count">Plan Trip Now</span>
                             <div class="place-content">
                                 <div class="info text-white">
-                                    <h3 class="title mb-10">Maldives</h3>
-                                    <p class="price"><span class="currency">$</span>225.63</p>
+                                    {{-- <h3 class="title mb-10">Dubai</h3> --}}
+                                    <h3 class="title mb-10">Dubai Excursions</h3>
+                                    {{-- <p class="price"><span class="currency">$</span>225.63</p> --}}
+                                    <br>
+                                    <strong>
+                                        <a style="border:2px solid #ffffff; color:#ffffff" class="main-btn btn" href="{{url('/')}}/plan-my-trip">Plan My Trip <i class="fas fa-paper-plane"></i></a>
+                                    </strong>
                                 </div>
                             </div>
                         </div>
@@ -104,12 +114,17 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                     <div class="single-place-item-two mb-30">
                         <div class="place-img">
-                            <img src="{{asset('theme/assets/images/place/place-15.jpg')}}" alt="Place Image">
-                            <span class="tour-count">5 Tours</span>
+                            <img style="min-height:357px" src="{{url('/')}}/uploads/experiences/Silverback-gorilla-look-at-the-camera-on-gorilla-trekking-in-uganda-1024x692.jpg" alt="Place Image">
+                            <span class="tour-count">Plan Trip Now</span>
                             <div class="place-content">
                                 <div class="info text-white">
-                                    <h3 class="title mb-10">Dubai</h3>
-                                    <p class="price"><span class="currency">$</span>225.63</p>
+                                    {{-- <h3 class="title mb-10">Dubai</h3> --}}
+                                    <h3 class="title mb-10">Uganda Gorilla Trekking</h3>
+                                    {{-- <p class="price"><span class="currency">$</span>225.63</p> --}}
+                                    <br>
+                                    <strong>
+                                        <a style="border:2px solid #ffffff; color:#ffffff" class="main-btn btn" href="{{url('/')}}/plan-my-trip">Plan My Trip <i class="fas fa-paper-plane"></i></a>
+                                    </strong>
                                 </div>
                             </div>
                         </div>
@@ -118,12 +133,16 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                     <div class="single-place-item-two mb-30">
                         <div class="place-img">
-                            <img src="{{asset('theme/assets/images/place/place-16.jpg')}}" alt="Place Image">
-                            <span class="tour-count">5 Tours</span>
+                            <img src="{{url('/')}}/uploads/experiences/pexels-manuél-2949825.jpg" alt="Place Image">
+                            <span class="tour-count">2 Tours</span>
                             <div class="place-content">
                                 <div class="info text-white">
-                                    <h3 class="title mb-10">France</h3>
-                                    <p class="price"><span class="currency">$</span>225.63</p>
+                                    <h3 class="title mb-10">Tanzania Tours</h3>
+                                    {{-- <p class="price"><span class="currency">$</span>225.63</p> --}}
+                                    <br>
+                                    <strong>
+                                        <a style="border:2px solid #ffffff; color:#ffffff" class="main-btn btn" href="{{url('/')}}">Explore More <i class="fas fa-paper-plane"></i></a>
+                                    </strong>
                                 </div>
                             </div>
                         </div>
@@ -132,40 +151,16 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="single-place-item-two mb-30 wow fadeInUp">
                         <div class="place-img">
-                            <img src="{{asset('theme/assets/images/place/place-12.jpg')}}" alt="Place Image">
-                            <span class="tour-count">5 Tours</span>
+                            <img src="{{url('/')}}/uploads/experiences/shore-line-mombasa-kenyan-coast.jpg" alt="Place Image">
+                            <span class="tour-count">3 Tours</span>
                             <div class="place-content">
                                 <div class="info text-white">
-                                    <h3 class="title mb-10">Switzerland</h3>
-                                    <p class="price"><span class="currency">$</span>225.63</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="single-place-item-two mb-30 wow fadeInUp">
-                        <div class="place-img">
-                            <img src="{{asset('theme/assets/images/place/place-18.jpg')}}" alt="Place Image">
-                            <span class="tour-count">5 Tours</span>
-                            <div class="place-content">
-                                <div class="info text-white">
-                                    <h3 class="title mb-10">Morocco</h3>
-                                    <p class="price"><span class="currency">$</span>225.63</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="single-place-item-two mb-30 wow fadeInUp">
-                        <div class="place-img">
-                            <img src="{{asset('theme/assets/images/place/place-19.jpg')}}" alt="Place Image">
-                            <span class="tour-count">5 Tours</span>
-                            <div class="place-content">
-                                <div class="info text-white">
-                                    <h3 class="title mb-10">Hong Kong</h3>
-                                    <p class="price"><span class="currency">$</span>225.63</p>
+                                    <h3 class="title mb-10">Coastal Kenya</h3>
+                                    {{-- <p class="price"><span class="currency">$</span>225.63</p> --}}
+                                    <br>
+                                    <strong>
+                                        <a style="border:2px solid #ffffff; color:#ffffff" class="main-btn btn" href="{{url('/')}}">Explore More <i class="fas fa-paper-plane"></i></a>
+                                    </strong>
                                 </div>
                             </div>
                         </div>

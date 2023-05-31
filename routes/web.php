@@ -53,7 +53,7 @@ Route::get('/shop', function () {
 // });
 // Clear Cache
 
-// Auth::routes();
+Auth::routes();
 
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 

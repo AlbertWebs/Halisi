@@ -262,53 +262,11 @@
         <!--====== Start What We Section ======-->
         @include('front.why')
         <!--====== Start Gallery Section ======-->
-        <section class="gallery-section-two pb-100">
-            <div class="container-fluid">
-                <!--=== Gallery Slider ===-->
-                <div class="slider-active-3-item-dot">
-                    <!--=== Gallery Item ===-->
-                    <div class="single-gallery-item-two">
-                        <div class="img-holder">
-                            <img style="min-height:371px" src="{{url('/')}}/uploads/destinations/amboseli-3.jpeg" alt="Gallery Image">
-                        </div>
-                        <div class="content">
-                            <h3 class="title">Amboseli National Park</h3>
-                            <a href="#">Adventure & Travel</a>
-                        </div>
-                    </div>
-                    <!--=== Gallery Item ===-->
-                    <div class="single-gallery-item-two">
-                        <div class="img-holder">
-                            <img style="min-height:371px" src="{{url('/')}}/uploads/destinations/maasai-mara-lion-king.webp" alt="Gallery Image">
-                        </div>
-                        <div class="content">
-                            <h3 class="title">Masai Mara</h3>
-                            <a href="#">Adventure & Travel</a>
-                        </div>
-                    </div>
-                    <!--=== Gallery Item ===-->
-                    <div class="single-gallery-item-two">
-                        <div class="img-holder">
-                            <img style="min-height:371px" src="{{url('/')}}/uploads/destinations/nairobi-city-tours.jpg" alt="Gallery Image">
-                        </div>
-                        <div class="content">
-                            <h3 class="title">City Excursions</h3>
-                            <a href="#">Adventure & Travel</a>
-                        </div>
-                    </div>
-                    <!--=== Gallery Item ===-->
-                    <div class="single-gallery-item-two">
-                        <div class="img-holder">
-                            <img src="{{asset('theme/assets/images/gallery/gallery-8.jpg')}}" alt="Gallery Image">
-                        </div>
-                        <div class="content">
-                            <h3 class="title">Couple Tent Camping On Hills</h3>
-                            <a href="#">Adventure & Travel</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!--====== End Gallery Section ======-->
+        <hr>
+        {{--  --}}
+        @include('front.tours')
+        {{--  --}}
+
         <!--====== Start Testimonial Section ======-->
         <section class="testimonial-section bg_cover pt-100 pb-100" style="background-image: url('{{asset('theme/assets/images/bg/map-bg.jpg')}}');">
             <div class="container">
@@ -457,7 +415,7 @@
             </div>
         </section><!--====== End Testimonial Section ======-->
         <!--====== Start Blog Section ======-->
-        <section class="blog-section pt-100 pb-60" id="News">
+        {{-- <section class="blog-section pt-100 pb-60" id="News">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
@@ -519,7 +477,8 @@
                     </div>
                 </div>
             </div>
-        </section><!--====== End Blog Section ======-->
+        </section> --}}
+        <!--====== End Blog Section ======-->
         <!--====== Start Partners Section ======-->
         <section class="partners-section">
             <div class="container">

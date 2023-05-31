@@ -49,8 +49,9 @@
                             </div>
                             <div class="content">
                                 <h4>Safety First Always</h4>
-                                <p>Set perspiciatis unde omnis estenatus voluptatem
-                                    accusantium laudantium totarem aperiae</p>
+                                <p>
+                                    Travel safety is an important consideration for anyone planning a trip.Halisi Africa Discoveries Puts the safety of Her Clients ahead of everything
+                                </p>
                             </div>
                         </div>
                         <!--=== Single Features List ===-->
@@ -65,7 +66,9 @@
                             </div>
                             <div class="content">
                                 <h4>Low Price & Friendly</h4>
-                                <p>Quis autem vel eum iure reprehenderit voluptate velit esse nihile molestiae consequatur.</p>
+                                <p>
+                                    Low Price & Friendly is a travel concept that focuses on providing affordable and welcoming experiences to travelers. Whether you are a budget-conscious adventurer or simply looking for a cost-effective way to explore new destinations, Low Price & Friendly aims to make travel accessible to all.
+                                </p>
                             </div>
                         </div>
                         <!--=== Single Features List ===-->
@@ -80,8 +83,9 @@
                             </div>
                             <div class="content">
                                 <h4>Trusted Travel Guide</h4>
-                                <p>At vero accusamus dignissimos ducimus blanditiis
-                                    praesentium voluptatum deleniti atque quos</p>
+                                <p>
+                                    As a Trusted Travel Guide, we understand the importance of providing reliable and accurate information to travelers. We strive to be a trusted source of guidance, assisting you in planning your journeys and making informed decisions.
+                                </p>
                             </div>
                         </div>
                     </div>
