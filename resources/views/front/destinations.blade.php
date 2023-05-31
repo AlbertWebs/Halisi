@@ -167,7 +167,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-12">
                     <ul class="gowilds-pagination wow fadeInUp text-center mt-30">
                         <li><a href="#"><i class="far fa-arrow-left"></i></a></li>
@@ -178,7 +178,7 @@
                         <li><a href="#"><i class="far fa-arrow-right"></i></a></li>
                     </ul>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section><!--====== End Destination Section ======-->
 
