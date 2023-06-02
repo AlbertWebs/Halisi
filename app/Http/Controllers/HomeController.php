@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Mailer;
+use Redirect;
+use Session;
+use Auth;
+use Mail;
 
 class HomeController extends Controller
 {
