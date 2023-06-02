@@ -266,6 +266,17 @@
         <script src="{{asset('theme/assets/vendor/wow.min.js')}}"></script>
         <!--====== Main js ======-->
         <script src="{{asset('theme/assets/js/theme.js')}}"></script>
+
+        <script>
+            $("form").each(function() {
+                $(this).find(':input[type="submit"]').prop('disabled', true);
+            });
+            function correctCaptcha() {
+                $("form").each(function() {
+                    $(this).find(':input[type="submit"]').prop('disabled', false);
+                });
+            }
+        </script>
     </body>
 
 </html>

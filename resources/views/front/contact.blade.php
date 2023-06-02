@@ -93,7 +93,9 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="contact-area wow fadeInUp">
-                    <form class="contact-form">
+                    <form class="contact-form" action="{{url('/')}}/send-message" method="POST">
+                        @csrf
+                        <input type="hidden" name="switch" value="message">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form_group">
@@ -112,7 +114,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form_group">
-                                    <input type="url" placeholder="Website" class="form_control" name="website" required>
+                                    <input type="text" placeholder="Booking" class="form_control" name="subject" required>
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -120,9 +122,16 @@
                                     <textarea name="message" placeholder="Write Message" class="form_control" rows="6"></textarea>
                                 </div>
                             </div>
+                            {{--  --}}
+                            <div class="col-lg-12 col-md-12" id="TheCapcha">
+                                <div class="g-recaptcha" data-sitekey="6LcyuF4mAAAAAAgt5KFmxuQS7i_j0Ua1nWIW1D-N" data-callback="correctCaptcha"></div>
+                                <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+                            </div>
+                            {{--  --}}
+                            <br>
                             <div class="col-lg-12">
                                 <div class="form_group text-center">
-                                    <button class="main-btn primary-btn">Send Us Message<i class="fas fa-paper-plane"></i></button>
+                                    <button type="submit" class="main-btn primary-btn">Send Us Message<i class="fas fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>

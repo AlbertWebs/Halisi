@@ -31,6 +31,9 @@ Route::get('/plan-my-trip', function () {
     return view('front.plan');
 });
 
+
+Route::post('/send-message', [App\Http\Controllers\HomeController::class,  'message']);
+
 Route::get('/destinations', function () {
     $Experience = DB::table('experiences')->get();
     return view('front.destinations',compact('Experience'));

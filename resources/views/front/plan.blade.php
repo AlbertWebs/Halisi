@@ -31,7 +31,9 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="contact-area wow fadeInUp">
-                    <form class="contact-form">
+                    <form class="contact-form"  action="{{url('/')}}/send-message" method="POST">
+                        @csrf
+                        <input type="hidden" name="switch" value="plan">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form_group">
@@ -50,7 +52,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form_group">
-                                    <input type="date" placeholder="Website" class="form_control datepicker hasDatepicker" id="dp1683624198731" name="date" required>
+                                    <input type="date" class="form_control datepicker hasDatepicker" id="dp1683624198731" name="date" required>
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -58,9 +60,16 @@
                                     <textarea name="message" placeholder="How Would You Like Your Trip?" class="form_control" rows="6"></textarea>
                                 </div>
                             </div>
+
+                            {{--  --}}
+                            <div class="col-lg-12 col-md-12" id="TheCapcha">
+                                <div class="g-recaptcha" data-sitekey="6LcyuF4mAAAAAAgt5KFmxuQS7i_j0Ua1nWIW1D-N" data-callback="correctCaptcha"></div>
+                                <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+                            </div>
+                            {{--  --}}
                             <div class="col-lg-12">
                                 <div class="form_group text-center">
-                                    <button class="main-btn primary-btn">Plan Now!<i class="fas fa-paper-plane"></i></button>
+                                    <button type='submit' class="main-btn primary-btn">Plan Now!<i class="fas fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
