@@ -69,6 +69,10 @@
                 </div>
             </div>
         </div><!--====== Search From ======-->
+        <?php
+        $Settings = DB::table('sitesettings')->get();
+        ?>
+        @foreach ($Settings as $Set)
         <!--====== Start Hero Section ======-->
         <header class="header-area header-three">
             <!--====== Header Top Bar ======-->
@@ -109,7 +113,7 @@
                                                 <div class="info">
                                                     <span class="title">Email Address</span>
                                                     <h5>
-                                                        <a href="mailto:mailto:info@halisiafricadiscoveries.com"><span class="__cf_email__" data-cfemail="89fafcf9f9e6fbfdc9eee4e8e0e5a7eae6e4">info@halisiafricadiscoveries.com</span></a>
+                                                        <a href="mailto:mailto:info@halisiafricadiscoveries.com"><span class="__cf_email__" data-cfemail="89fafcf9f9e6fbfdc9eee4e8e0e5a7eae6e4">{{$Set->email}}</span></a>
                                                         <a href="mailto:mailto:hello@halisiafricadiscoveries.com"><span class="__cf_email__" data-cfemail="89fafcf9f9e6fbfdc9eee4e8e0e5a7eae6e4">hello@halisiafricadiscoveries.com</span></a>
                                                     </h5>
                                                 </div>
@@ -125,9 +129,9 @@
                                                 <div class="info">
                                                     <span class="title">Call Us</span>
                                                     <h5>
-                                                        <a href="tel:+000(123)45688">+254 700 757752</a>
+                                                        <a href="tel:{{$Set->mobile}}">{{$Set->mobile}}</a>
                                                         <br>
-                                                        <a href="tel:+000(123)45688">+254 700 757752</a>
+                                                        <a href="tel:{{$Set->mobile_one}}">{{$Set->mobile_one}}</a>
                                                     </h5>
                                                 </div>
                                             </div>
@@ -234,6 +238,7 @@
                 </div>
             </div>
         </header><!--====== End Header ======-->
+        @endforeach
         @yield('content')
         <!--====== Start Footer ======-->
          <!--====== Start Footer ======-->

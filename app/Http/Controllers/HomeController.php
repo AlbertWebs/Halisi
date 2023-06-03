@@ -37,8 +37,11 @@ class HomeController extends Controller
         return view('front.terms',compact('Terms'));
     }
 
-
-
+    public function privacy()
+    {
+        $Terms = DB::table('privacy')->get();
+        return view('front.privacy',compact('Terms'));
+    }
 
 
     public function message(Request $request){

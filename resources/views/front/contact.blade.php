@@ -8,7 +8,7 @@
                 <div class="page-banner-content text-center text-white">
                     <h1 class="page-title">Contact Us</h1>
                     <ul class="breadcrumb-link text-white">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Home</a></li>
                         <li class="active">Contact Us</li>
                     </ul>
                 </div>
@@ -16,6 +16,12 @@
         </div>
     </div>
 </section><!--====== End Breadcrumb Section ======-->
+<?php
+  $Settings = DB::table('sitesettings')->get();
+?>
+@foreach ($Settings as $Set)
+
+
 <!--====== Start Info Section ======-->
 <section class="contact-info-section pt-100 pb-60">
     <div class="container">
@@ -38,8 +44,7 @@
                     </div>
                     <div class="info">
                         <span class="title">Office Location</span>
-                        <p>Astrol Center , 6th Floor
-                            Thika Road, Nairobi</p>
+                        <p>{{$Set->address}}</p>
                     </div>
                 </div>
             </div>
@@ -51,7 +56,7 @@
                     </div>
                     <div class="info">
                         <span class="title">Email Address</span>
-                        <p><a href="mailto:info@halisiafricadiscoveries.com"><span class="__cf_email__" data-cfemail="">info@halisiafricadiscoveries.com</span></a></p>
+                        <p><a href="mailto:info@halisiafricadiscoveries.com"><span class="__cf_email__" data-cfemail="">{{$Set->mobile_one}}</span></a></p>
                         <p><a href="https://halisiafricadiscoveries.com/">halisiafricadiscoveries.com</a></p>
                     </div>
                 </div>
@@ -64,14 +69,15 @@
                     </div>
                     <div class="info">
                         <span class="title">Hotline</span>
-                        <p><a href="tel:+254700757752">+254700757752</a></p>
-                        <p><a href="tel:+254700757752">+254700757752</a></p>
+                        <p><a href="tel:{{$Set->mobile}}">{{$Set->mobile}}</a></p>
+                        <p><a href="tel:{{$Set->mobile_one}}">{{$Set->mobile_one}}</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section><!--====== End Info Section ======-->
+@endforeach
 <!--====== Start Contact Map Section ======-->
 <section class="contact-page-map pb-100 wow fadeInUp">
     <!--=== Map Box ===-->
