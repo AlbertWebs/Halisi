@@ -19,6 +19,28 @@ class HomeController extends Controller
         return view('front.itinerary',compact('Experience'));
     }
 
+    public function countries($slung)
+    {
+        $Country = DB::table('countries')->where('slung',$slung)->get();
+        return view('front.countries',compact('Country'));
+    }
+
+    public function copyright()
+    {
+        $Terms = DB::table('copyright')->get();
+        return view('front.copyright',compact('Terms'));
+    }
+
+    public function terms()
+    {
+        $Terms = DB::table('terms')->get();
+        return view('front.terms',compact('Terms'));
+    }
+
+
+
+
+
     public function message(Request $request){
         $switch = $request->switch;
 

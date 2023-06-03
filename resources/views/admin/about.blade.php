@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="wrap" >
-        
+
 
         <!-- HEADER SECTION -->
         @include('admin.top')
@@ -18,7 +18,7 @@
 
         <!--PAGE CONTENT -->
         <div id="content">
-             
+
             <div class="inner" style="min-height: 700px;">
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -37,13 +37,13 @@
                   <!--END BLOCK SECTION -->
                 <hr />
                    <!-- CHART & CHAT  SECTION -->
-              
+
                  <!--END CHAT & CHAT SECTION -->
-               
+
                   <!-- Inner Content Here -->
-                 
+
             <div class="inner">
-                
+
 
               <div class="row">
                <center>
@@ -56,11 +56,11 @@
                     @foreach($About as $value)
                         <!--  -->
                         <div class="form-group">
-                            <label for="limiter" class="control-label col-lg-4">Dedicated Support</label>
+                            <label for="limiter" class="control-label col-lg-4">Safety First Always</label>
 
                             <div class="col-lg-8">
                                 <textarea id="limiter-1" name="support" class="form-control">{{$value->support}}</textarea>
-                                <p class="help-block">Add Limited Words To Describe The News</p>
+                                <p class="help-block">Safety</p>
                             </div>
                         </div>
 
@@ -74,7 +74,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="limiter3" class="control-label col-lg-4">Meta Data</label>
+                            <label for="limiter3" class="control-label col-lg-4">Trusted Travel Guide</label>
 
                             <div class="col-lg-8">
                                 <textarea id="limiter-3" name="handpicked" class="form-control">{{$value->handpicked}}</textarea>
@@ -83,7 +83,7 @@
                         </div>
                         <!--  -->
 
-          
+
                         <div class="col-lg-12">
                             <div class="box">
                                 <header>
@@ -105,10 +105,10 @@
                                     </ul>
                                 </header>
                                 <div id="div-1" class="body collapse in">
-                                    
+
                                         <textarea name="content" id="wysihtml5" class="form-control" rows="10">{{$value->content}}</textarea>
 
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                     <div class="col-lg-12 text-center">
                       <button type="submit" class="btn btn-success"><i class="icon-check icon-white"></i> Save Changes</button>
                     </div>
-                    
+
                     <input type="hidden" name="image_cheat" value="{{$value->image}}">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     @endforeach
@@ -144,7 +144,7 @@
 
 
 
-                
+
             </div>
 
         </div>

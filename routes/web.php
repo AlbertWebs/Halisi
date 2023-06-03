@@ -41,6 +41,11 @@ Route::get('/destinations', function () {
 
 
 Route::get('/destinations/itinerary/{slung}', [App\Http\Controllers\HomeController::class,  'itinerary']);
+Route::get('/countries/{slung}', [App\Http\Controllers\HomeController::class,  'countries']);
+
+Route::get('/terms-and-conditions', [App\Http\Controllers\HomeController::class,  'terms']);
+Route::get('/privacy-policy', [App\Http\Controllers\HomeController::class,  'privacy']);
+Route::get('/copyright', [App\Http\Controllers\HomeController::class,  'copyright']);
 
 Route::get('/shop', function () {
     return view('front.shop');

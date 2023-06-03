@@ -172,13 +172,16 @@
 
 
 
-                                    <li class="menu-item has-children"><a href="#">Explore Kenya</a>
+                                    <li class="menu-item has-children"><a href="#">Explore Countries</a>
                                         <ul class="sub-menu">
-                                            <li><a href="tour.html">Tours</a></li>
-
+                                            <?php
+                                               $Countries = DB::table('countries')->get();
+                                            ?>
+                                            @foreach ($Countries as $Country)
+                                            <li><a href="{{url('/')}}/countries/{{$Country->slung}}">{{$Country->heading}}</a></li>
+                                            @endforeach
                                         </ul>
                                     </li>
-
                                     <li class="menu-item"><a href="{{url('/')}}/destinations">Destinations</a>
 
                                     </li>

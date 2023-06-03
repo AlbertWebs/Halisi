@@ -97,9 +97,9 @@
                     <!--=== Footer Nav ===-->
                     <div class="footer-nav float-lg-end">
                         <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms and Conditions</a></li>
-                            <li><a href="#">Copyright Statement</a></li>
+                            <li><a href="{{url('/')}}/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="{{url('/')}}/terms-and-conditions">Terms and Conditions</a></li>
+                            <li><a href="{{url('/')}}/copyright">Copyright Statement</a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,3 +1,8 @@
+<?php
+    $About = DB::table('about')->get()
+
+?>
+@foreach ($About as $about)
 <section class="we-section pt-100 pb-50">
     <div class="container">
         <div class="row align-items-xl-center">
@@ -50,7 +55,7 @@
                             <div class="content">
                                 <h4>Safety First Always</h4>
                                 <p>
-                                    Travel safety is an important consideration for anyone planning a trip.Halisi Africa Discoveries Puts the safety of Her Clients ahead of everything
+                                    {!! html_entity_decode($about->support) !!}
                                 </p>
                             </div>
                         </div>
@@ -67,7 +72,7 @@
                             <div class="content">
                                 <h4>Low Price & Friendly</h4>
                                 <p>
-                                    Low Price & Friendly is a travel concept that focuses on providing affordable and welcoming experiences to travelers. Whether you are a budget-conscious adventurer or simply looking for a cost-effective way to explore new destinations, Low Price & Friendly aims to make travel accessible to all.
+                                    {!! html_entity_decode($about->price) !!}
                                 </p>
                             </div>
                         </div>
@@ -84,7 +89,7 @@
                             <div class="content">
                                 <h4>Trusted Travel Guide</h4>
                                 <p>
-                                    As a Trusted Travel Guide, we understand the importance of providing reliable and accurate information to travelers. We strive to be a trusted source of guidance, assisting you in planning your journeys and making informed decisions.
+                                    {!! html_entity_decode($about->handpicked) !!}
                                 </p>
                             </div>
                         </div>
@@ -94,3 +99,4 @@
         </div>
     </div>
 </section><!--====== End What We Section ======-->
+@endforeach

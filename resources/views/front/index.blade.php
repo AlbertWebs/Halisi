@@ -68,43 +68,43 @@
         </div>
     </section><!--====== End Hero Section ======-->
         <!--====== Start Features Section ======-->
+        <?php
+    $About = DB::table('about')->get()
 
-        <!--====== Start About Section ======-->
-        <section class="about-section bg_cover pt-60 pb-60" style="background-image: url('{{asset('theme/assets/images/bg/about-bg-1.jpg')}}');">
-            <div class="container">
-                <div class="row align-items-xl-center">
-                    <div class="col-lg-6">
-                        <!--=== About Image Box ===-->
-                        <div class="about-image-box mbs-50">
-                            <br> <br>
-                            <img src="{{url('/')}}/uploads/banners/pexels-twilight-kenya-11866350.jpg" class="rounded-2" alt="About Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <!--=== About Content Box ===-->
-                        <div class="about-content-box text-white pl-lg-40 mb-50">
-                            <!--=== Section Title ===-->
-                            <div class="section-title mb-30">
-                                <span class="sub-title">About Company</span>
-                                <h2>We’re Number #1 Travel
-                                    Adventure Partner</h2>
+    ?>
+        @foreach ($About as $about)
+            <!--====== Start About Section ======-->
+            <section class="about-section bg_cover pt-60 pb-60" style="background-image: url('{{asset('theme/assets/images/bg/about-bg-1.jpg')}}');">
+                <div class="container">
+                    <div class="row align-items-xl-center">
+                        <div class="col-lg-6">
+                            <!--=== About Image Box ===-->
+                            <div class="about-image-box mbs-50">
+                                <br> <br>
+                                <img src="{{url('/')}}/uploads/banners/pexels-twilight-kenya-11866350.jpg" class="rounded-2" alt="About Image">
                             </div>
-                            <p class="mb-30">
-                                Halisi Africa Discoveries is a premier tour planning company that combines a passion for women empowerment and environmental sustainability. We are committed to creating unique and memorable travel experiences while promoting social and ecological responsibility. Our company is dedicated to empowering women and protecting the environment through sustainable practices.
-                            </p>
-                            <p class="mb-30">
-                                We at Halisi Africa Discoveries are dedicated to making a difference in society. We actively work with local groups and CBOs and NGOs to support initiatives for community development, environmental preservation, and women's empowerment. In order to have a long-lasting impact on the communities we work with, a portion of our profits are invested in these initiatives.
-                            </p>
-
-
                         </div>
-                    </div>
-                    <div class="big-text pt-10s wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                        <img src="{{asset('theme/assets/images/bg/adventure.png')}}" alt="Halisi Afirca Discoveries">
+                        <div class="col-lg-6">
+                            <!--=== About Content Box ===-->
+                            <div class="about-content-box text-white pl-lg-40 mb-50">
+                                <!--=== Section Title ===-->
+                                <div class="section-title mb-30">
+                                    <span class="sub-title">About Company</span>
+                                    <h2>We’re Number #1 Travel
+                                        Adventure Partner</h2>
+                                </div>
+                                {!! html_entity_decode($about->content) !!}
+
+
+                            </div>
+                        </div>
+                        <div class="big-text pt-10s wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                            <img src="{{asset('theme/assets/images/bg/adventure.png')}}" alt="Halisi Afirca Discoveries">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section><!--====== End About Section ======-->
+            </section><!--====== End About Section ======-->
+        @endforeach
 
         <!--====== Start Service Section ======-->
         <section class="service-section pt-100 pb-60">
@@ -279,6 +279,10 @@
                     </div>
                 </div>
                 <div class="slider-active-3-item-dot">
+                    <?php
+                       $Testimonial = DB::table('testimonial')->get();
+                    ?>
+                    @foreach($Testimonial as $testimony)
                     <div class="gw-testimonial-item-two">
                         <div class="testimonial-inner-content">
                             <div class="quote-rating-box">
@@ -296,121 +300,22 @@
                                     </ul>
                                 </div>
                             </div>
-                            <p>To take a trivial example which of
-                                usev undertakes laborious physical
-                                exercise excepto obtain advantage
-                                from has any right to find fault with
-                                man.</p>
+                            <p>
+                                {!! html_entity_decode($testimony->content) !!}
+                            </p>
                             <div class="author-thumb-title">
                                 <div class="author-thumb">
-                                    <img src="{{url('/')}}/uploads/testimonials/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
+                                    <img src="{{url('/')}}/uploads/testimonials/{{$testimony->image}}" alt="Author Image">
                                 </div>
                                 <div class="author-title">
-                                    <h3 class="title">Douglas Onyancha</h3>
-                                    <p class="position">CEO & Founder</p>
+                                    <h3 class="title">{{$testimony->name}}</h3>
+                                    <p class="position">{{$testimony->position}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="gw-testimonial-item-two">
-                        <div class="testimonial-inner-content">
-                            <div class="quote-rating-box">
-                                <div class="icon">
-                                    <img src="{{asset('theme/assets/images/testimonial/quote.png')}}" alt="quote icon">
-                                </div>
-                                <div class="ratings-box">
-                                    <h4>Quality Services</h4>
-                                    <ul class="ratings">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p>To take a trivial example which of
-                                usev undertakes laborious physical
-                                exercise excepto obtain advantage
-                                from has any right to find fault with
-                                man.</p>
-                            <div class="author-thumb-title">
-                                <div class="author-thumb">
-                                    <img src="{{url('/')}}/uploads/testimonials/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
-                                </div>
-                                <div class="author-title">
-                                    <h3 class="title">John Kirimi</h3>
-                                    <p class="position">CEO & Founder</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gw-testimonial-item-two">
-                        <div class="testimonial-inner-content">
-                            <div class="quote-rating-box">
-                                <div class="icon">
-                                    <img src="{{asset('theme/assets/images/testimonial/quote.png')}}" alt="quote icon">
-                                </div>
-                                <div class="ratings-box">
-                                    <h4>Quality Services</h4>
-                                    <ul class="ratings">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p>To take a trivial example which of
-                                usev undertakes laborious physical
-                                exercise excepto obtain advantage
-                                from has any right to find fault with
-                                man.</p>
-                            <div class="author-thumb-title">
-                                <div class="author-thumb">
-                                    <img src="{{url('/')}}/uploads/testimonials/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
-                                </div>
-                                <div class="author-title">
-                                    <h3 class="title">Rickie Kamau</h3>
-                                    <p class="position">CEO & Founder</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gw-testimonial-item-two">
-                        <div class="testimonial-inner-content">
-                            <div class="quote-rating-box">
-                                <div class="icon">
-                                    <img src="{{asset('theme/assets/images/testimonial/quote.png')}}" alt="quote icon">
-                                </div>
-                                <div class="ratings-box">
-                                    <h4>Quality Services</h4>
-                                    <ul class="ratings">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p>To take a trivial example which of
-                                usev undertakes laborious physical
-                                exercise excepto obtain advantage
-                                from has any right to find fault with
-                                man.</p>
-                            <div class="author-thumb-title">
-                                <div class="author-thumb">
-                                    <img src="{{url('/')}}/uploads/testimonials/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
-                                </div>
-                                <div class="author-title">
-                                    <h3 class="title">Oscar Lino</h3>
-                                    <p class="position">CEO & Founder</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </section><!--====== End Testimonial Section ======-->
