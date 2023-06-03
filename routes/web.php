@@ -47,13 +47,13 @@ Route::get('/shop', function () {
 });
 
 // Clear Cache
-// Route::get('/clear-cache', function() {
-//     $exitCode = Artisan::call('cache:clear');
-//     $exitCode2 = Artisan::call('config:clear');
-//     $exitCode3 = Artisan::call('route:cache');
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode2 = Artisan::call('config:clear');
+    $exitCode3 = Artisan::call('route:cache');
 
-//     echo "Done";
-// });
+    echo "Done";
+});
 // Clear Cache
 
 // Auth::routes();
