@@ -60,10 +60,10 @@
                         <!--=== About Content Box ===-->
                         <div class="about-content-box text-white pl-lg-40 mb-50">
                             <!--=== Section Title ===-->
-                            <div class="section-title mb-30">
+                            {{-- <div class="section-title mb-30">
                                 <span class="sub-title">About Us</span>
 
-                            </div>
+                            </div> --}}
                             {{-- {{}} --}}
                             <h4 style="color:#63AB45">Mission</h4>
                             <p>At Halisi Africa Discoveries our mission is to provide exceptional travel experiences that empower women and promote environmental sustainability. We strive to create meaningful connections between travelers and local communities, while actively working to protect and preserve the natural world.</p>
