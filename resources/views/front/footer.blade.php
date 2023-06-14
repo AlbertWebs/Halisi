@@ -79,6 +79,45 @@
                                     <input type="email" class="form_control" placeholder="Email Address" name="email" required>
                                 </div>
                             </form>
+                            {{--  --}}
+                            <!-- Stack overflow -->
+
+                            <br>
+                            <!-- instagram -->
+                            <a  href="https://www.instagram.com/halisiafricadiscoveries/">
+                                <i class="fab fa-instagram fa-2x" style="color: #ff0050;"></i>
+                            </a>
+                            &nbsp; &nbsp;
+
+
+                            <!-- Youtube -->
+                            <a  href="http://youtube.com/">
+                                <i class="fab fa-youtube fa-2x" style="color: #ed302f;"></i>
+                            </a>
+                            &nbsp; &nbsp;
+                            <!-- facebook -->
+                            <a  href="https://www.facebook.com/halisiafricadiscoveries/">
+                                <i class="fab fa-facebook fa-2x" style="color: #3b5998;"></i>
+                            </a>
+                            &nbsp; &nbsp;
+                            <!-- twitter -->
+                            <a  href="https://twitter.com/AfricaHalisi">
+                               <i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i>
+                            </a>
+                            &nbsp; &nbsp;
+                            <!-- whatsapp -->
+                            <a  href="https://wa.me/+254700757752?">
+                              <i class="fab fa-whatsapp fa-2x" style="color: #25d366;"></i>
+                            </a>
+                            &nbsp; &nbsp;
+                            <!-- TikTok -->
+                            <a  href="https://www.tiktok.com/@halisiafricadiscoveries">
+                                <i class="fab fa-tiktok fa-2x" style="color: #ff0050;"></i>
+                            </a>
+                            &nbsp; &nbsp;
+
+
+
                         </div>
                     </div>
                 </div>
