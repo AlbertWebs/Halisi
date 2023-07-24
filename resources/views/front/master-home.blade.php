@@ -22,6 +22,17 @@
         <meta name="twitter:site" content="@halisiafricadiscoveries" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@halisiafricadiscoveries" />
+         {{--  --}}
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-41DB0LJXPT"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-41DB0LJXPT');
+        </script>
+        {{--  --}}
         {{--  --}}
         <!--====== Favicon Icon ======-->
         <link rel="shortcut icon" href="{{asset('theme/assets/images/favicon.ico')}}" type="image/png">
