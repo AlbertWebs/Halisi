@@ -119,9 +119,9 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li class="menu-item"><a href="{{url('/')}}/destinations">Destinations</a>
+                                    {{-- <li class="menu-item"><a href="{{url('/')}}/destinations">Destinations</a>
 
-                                    </li>
+                                    </li> --}}
 
 
                                     {{-- <li class="menu-item"><a href="{{url('/')}}/destinations">Destinations</a>

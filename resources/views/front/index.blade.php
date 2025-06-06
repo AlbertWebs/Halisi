@@ -268,7 +268,7 @@
         {{--  --}}
 
         <!--====== Start Testimonial Section ======-->
-        <section class="testimonial-section bg_cover pt-100 pb-100" style="background-image: url('{{asset('theme/assets/images/bg/map-bg.jpg')}}');">
+        {{-- <section class="testimonial-section bg_cover pt-100 pb-100" style="background-image: url('{{asset('theme/assets/images/bg/map-bg.jpg')}}');">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-7">
@@ -318,7 +318,181 @@
 
                 </div>
             </div>
+        </section> --}}
+         <!--====== Start Testimonial Section ======-->
+        <section class="testimonial-section bg_cover pt-100 pb-100" style="background-image: url('https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/theme/assets/images/bg/map-bg.jpg');">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7">
+                        <div class="section-title text-center text-white mb-60">
+                            <span class="sub-title">Testimonials</span>
+                            <h2>What Our Traveler Say About Our Tour Services</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-active-3-item-dot">
+                                                            <div class="gw-testimonial-item-two">
+                        <div class="testimonial-inner-content">
+                            <div class="quote-rating-box">
+                                <div class="icon">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/theme/assets/images/testimonial/quote.png" alt="quote icon">
+                                </div>
+                                <div class="ratings-box">
+                                    <h4>Quality Services</h4>
+                                    <ul class="ratings">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>
+                                Halisi Africa Discoveries went above and beyond what we hoped for. Their knowledge and planning turned our journey into an amazing adventure we'll never forget. I heartily endorse them to anyone looking for an authentic African travel experience.<br>
+                            </p>
+                            <div class="author-thumb-title">
+                                <div class="author-thumb">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/uploads/testimonials/2023-06-0309:19:55imageman-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
+                                </div>
+                                <div class="author-title">
+                                    <h3 class="title">Douglas</h3>
+                                    <p class="position">Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="gw-testimonial-item-two">
+                        <div class="testimonial-inner-content">
+                            <div class="quote-rating-box">
+                                <div class="icon">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/theme/assets/images/testimonial/quote.png" alt="quote icon">
+                                </div>
+                                <div class="ratings-box">
+                                    <h4>Quality Services</h4>
+                                    <ul class="ratings">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>
+                                Halisi Africa Discoveries provided a truly exceptional travel experience. Their expertise and meticulous attention to detail made our journey unforgettable. Highly recommended for an extraordinary adventure in Africa!
+                            </p>
+                            <div class="author-thumb-title">
+                                <div class="author-thumb">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/uploads/testimonials/2023-06-0309:27:18imageman-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
+                                </div>
+                                <div class="author-title">
+                                    <h3 class="title">Rickie</h3>
+                                    <p class="position">Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="gw-testimonial-item-two">
+                        <div class="testimonial-inner-content">
+                            <div class="quote-rating-box">
+                                <div class="icon">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/theme/assets/images/testimonial/quote.png" alt="quote icon">
+                                </div>
+                                <div class="ratings-box">
+                                    <h4>Quality Services</h4>
+                                    <ul class="ratings">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>
+                                I had an amazing experience with Halisi Africa Discoveries during our Diani trip. Their immersive curation ensured every aspect of the journey was well-planned, from accommodation to excursions. A seamless blend of adventure and relaxation, thanks to Halisi Africa for making our getaway truly memorable!
+                            </p>
+                            <div class="author-thumb-title">
+                                <div class="author-thumb">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/uploads/testimonials/2024-03-0715:32:19image2023-06-0309_27_18imageman-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
+                                </div>
+                                <div class="author-title">
+                                    <h3 class="title">Ruth</h3>
+                                    <p class="position">Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="gw-testimonial-item-two">
+                        <div class="testimonial-inner-content">
+                            <div class="quote-rating-box">
+                                <div class="icon">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/theme/assets/images/testimonial/quote.png" alt="quote icon">
+                                </div>
+                                <div class="ratings-box">
+                                    <h4>Quality Services</h4>
+                                    <ul class="ratings">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>
+                                Halisi Africa Discoveries nailed it with our Kibo Safari Camp trip! Everything was so well thought out, from the beginning to the end. It felt like they read our minds. Huge shoutout to Halisi for making our adventure absolutely amazing. If you're planning a trip, they're the ones to go with, hands down!
+                            </p>
+                            <div class="author-thumb-title">
+                                <div class="author-thumb">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/uploads/testimonials/2024-03-0715:33:16image2023-06-0309_27_18imageman-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
+                                </div>
+                                <div class="author-title">
+                                    <h3 class="title">Faith</h3>
+                                    <p class="position">Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="gw-testimonial-item-two">
+                        <div class="testimonial-inner-content">
+                            <div class="quote-rating-box">
+                                <div class="icon">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/theme/assets/images/testimonial/quote.png" alt="quote icon">
+                                </div>
+                                <div class="ratings-box">
+                                    <h4>Quality Services</h4>
+                                    <ul class="ratings">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>
+                                Wow, our 7-day luxury trip with Halisi Africa Discoveries in Tanzania was downright magical! Picture this: Serengeti's vast beauty, the jaw-dropping Ngorongoro Crater, the peaceful charm of Lake Manyara, and the wildlife extravaganza in Tarangire – all wrapped up in one incredible journey. Halisi made it feel like a dream with their attention to detail, turning every moment into a cherished memory. Massive shoutout for giving us the trip of a lifetime!"
+                            </p>
+                            <div class="author-thumb-title">
+                                <div class="author-thumb">
+                                    <img src="https://web.archive.org/web/20241211122955im_/https://halisiafricadiscoveries.com/uploads/testimonials/2024-03-0715:34:35image2023-06-0309_27_18imageman-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Author Image">
+                                </div>
+                                <div class="author-title">
+                                    <h3 class="title">Andy</h3>
+                                    <p class="position">Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </section><!--====== End Testimonial Section ======-->
+        <!--====== Start Blog Section ======-->
+        
+        <!--====== End Testimonial Section ======-->
         <!--====== Start Blog Section ======-->
         {{-- <section class="blog-section pt-100 pb-60" id="News">
             <div class="container">
