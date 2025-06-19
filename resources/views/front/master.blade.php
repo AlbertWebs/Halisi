@@ -197,9 +197,9 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    {{-- <li class="menu-item"><a href="{{url('/')}}/destinations">Destinations</a>
+                                    <li class="menu-item"><a href="{{url('/')}}/destinations">Destinations</a>
 
-                                    </li> --}}
+                                    </li>
 
 
                                     {{-- <li class="menu-item"><a href="{{url('/')}}/destinations">Destinations</a>
@@ -261,9 +261,9 @@
                                            
                                         </ul>
                                     </li> --}}
-                                    <li class="menu-item"><a href="{{url('/')}}/plan-my-trip">Plan My Trip</a>
+                                    {{-- <li class="menu-item"><a href="{{url('/')}}/plan-my-trip">Plan My Trip</a>
 
-                                    </li>
+                                    </li> --}}
 
                                     <li class="menu-item has-children"><a href="{{url('/contact-us')}}">Contact Us</a>
 

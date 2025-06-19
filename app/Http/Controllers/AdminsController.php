@@ -3650,6 +3650,22 @@ public function addExperience(){
 public function add_Experience(Request $request)
 {
     $path = 'uploads/experiences';
+     if(isset($request->image_one)){
+
+
+            $file = $request->file('image_one');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $timestamp = new Datetime();
+            $new_timestamp = $timestamp->format('Y-m-d H:i:s');
+            $image_main_temp = $new_timestamp.'image'.$filename;
+            $image_one = str_replace(' ', '',$image_main_temp);
+            $file->move($path, $image_one);
+
+    }else{
+        $image_one = $request->image_one_cheat;
+    }
+    // 
+    $path = 'uploads/experiences';
     $maxFileSize = 1800000; // Max file size in bytes (1.8 MB)
     
     // Helper function to handle file upload
@@ -3711,6 +3727,7 @@ public function add_Experience(Request $request)
     $Experience->cat = $request->cat;
     $Experience->meta = $request->meta;
     $Experience->destination = $request->town;
+    $Experience->image_one = $image_one;
 
     foreach ($images as $key => $value) {
         $Experience->$key = $value;
@@ -3755,12 +3772,8 @@ public function edit_Experience(Request $request, $id){
     }
 
     if(isset($request->image_two)){
-        $fileSize = $request->file('image_two')->getClientSize();
-         if($fileSize>=1800000){
-            Session::flash('message_image_two', "File Exceeded the maximum allowed Size");
-            Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-
-         }else{
+      
+         
 
             $file = $request->file('image_two');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
@@ -3769,19 +3782,14 @@ public function edit_Experience(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_two = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_two);
-         }
+         
     }else{
         $image_two = $request->image_two_cheat;
     }
 
 
     if(isset($request->image_three)){
-        $fileSize = $request->file('image_three')->getClientSize();
-        if($fileSize>=1800000){
-           Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
-           Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-
-        }else{
+   
 
             $file = $request->file('image_three');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
@@ -3790,18 +3798,13 @@ public function edit_Experience(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_three = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_three);
-        }
+        
     }else{
         $image_three = $request->image_three_cheat;
     }
 
     if(isset($request->image_four)){
-        $fileSize = $request->file('image_four')->getClientSize();
-        if($fileSize>=1800000){
-           Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
-           Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-
-        }else{
+      
 
             $file = $request->file('image_four');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
@@ -3810,18 +3813,13 @@ public function edit_Experience(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_four = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_four);
-        }
+        
     }else{
         $image_four = $request->image_four_cheat;
     }
 
     if(isset($request->image_five)){
-        $fileSize = $request->file('image_five')->getClientSize();
-        if($fileSize>=1800000){
-           Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
-           Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-
-        }else{
+        
 
             $file = $request->file('image_five');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
@@ -3830,18 +3828,13 @@ public function edit_Experience(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_five = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_five);
-        }
+        
     }else{
         $image_five = $request->image_five_cheat;
     }
 
     if(isset($request->image_six)){
-        $fileSize = $request->file('image_six')->getClientSize();
-        if($fileSize>=1800000){
-           Session::flash('message_image_three', "File Exceeded the maximum allowed Size");
-           Session::flash('messageError', "An error occured, You may have exceeded the maximum size for an image you uploaded");
-
-        }else{
+       
 
             $file = $request->file('image_six');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
@@ -3850,7 +3843,7 @@ public function edit_Experience(Request $request, $id){
             $image_main_temp = $new_timestamp.'image'.$filename;
             $image_six = str_replace(' ', '',$image_main_temp);
             $file->move($path, $image_six);
-        }
+        
     }else{
         $image_six = $request->image_six_cheat;
     }
